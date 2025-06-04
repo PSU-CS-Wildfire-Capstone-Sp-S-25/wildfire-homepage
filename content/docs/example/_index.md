@@ -1,10 +1,11 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Example Site"
+title: "Home"
 ---
 
-# Introduction
+# Welcome to the Wildfire Team Homepage!
+
 
 ## Ferre hinnitibus erat accipitrem dixi Troiae tollens
 
