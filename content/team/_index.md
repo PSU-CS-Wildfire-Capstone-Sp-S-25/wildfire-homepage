@@ -11,7 +11,7 @@ We're a dedicated group of experts passionate about wildfire research and techno
 ## Mentor
 
 <div class="team-member-card">
-  <img src="/fire.gif" alt="Dr. Safa Mote">
+  <img src="/safamote.jpeg" alt="Dr. Safa Mote">
   <div class="team-member-info">
     <h3>Dr. Safa Mote</h3>
     <p><strong>Role:</strong> Project Mentor</p>
