@@ -1,0 +1,30 @@
+baseURL = "https://yourwebsite.com/" # Replace with your actual URL
+languageCode = "en-us"
+title = "Wildfire Lab"
+theme = "ananke" # Or any other theme you prefer
+
+[menu]
+  [[menu.main]]
+    name = "Wildfire Lab"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Project Design"
+    url = "/project-design/"
+    weight = 2
+  [[menu.main]]
+    name = "Team"
+    url = "/team/" # Create a team page if needed
+    weight = 3
+  [[menu.main]]
+    name = "Wildfire Twin"
+    url = "/wildfire-twin/" # Create page if needed
+    weight = 4
+  [[menu.main]]
+    name = "AI Tools"
+    url = "/ai-tools/" # Create page if needed
+    weight = 5
+  [[menu.main]]
+    name = "Wildfire Publishing"
+    url = "/wildfire-publishing/" # Create page if needed
+    weight = 6
