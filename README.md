@@ -1,4 +1,1 @@
-run the Hugo server:
-'''
-hugo server  
-'''
+Use `hugo server` to start the local dev server.
