@@ -1,0 +1,7 @@
+<!-- filepath: layouts/shortcodes/tab.html -->
+{{ $parentID := .Parent.Get 0 }}
+{{ $idx := .Page.Scratch.Get $parentID | default 0 }}
+{{ $idx = int $idx }}
+{{ .Page.Scratch.Set (printf "%s-%d-label" $parentID $idx) (.Get 0) }}
+{{ .Page.Scratch.Set (printf "%s-%d" $parentID $idx) .Inner }}
+{{ .Page.Scratch.Set $parentID (add $idx 1) }}

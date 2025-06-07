@@ -1,0 +1,32 @@
+{{ $id := .Get 0 }}
+{{ .Page.Scratch.Set $id 0 }}
+{{ .Inner }}
+{{ $tabCount := .Page.Scratch.Get $id }}
+
+<div class="book-tabs">
+  <input type="radio" class="toggle" name="tabs-{{ $id }}" id="tabs-{{ $id }}-0" checked="checked">
+  {{ if gt $tabCount 1 }}
+    {{ range $idx := seq 1 (sub $tabCount 1) }}
+    <input type="radio" class="toggle" name="tabs-{{ $id }}" id="tabs-{{ $id }}-{{ $idx }}">
+    {{ end }}
+  {{ end }}
+
+  <div class="book-tabs-content">
+    {{ range $idx := seq $tabCount }}
+      {{ $content := $.Page.Scratch.Get (printf "%s-%d" $id $idx) }}
+      <div class="book-tabs-content-inner" id="tabs-{{ $id }}-{{ $idx }}-content">
+        {{ $content | markdownify }}
+      </div>
+    {{ end }}
+  </div>
+
+  <div class="book-tabs-labels">
+    {{ range $idx := seq $tabCount }}
+      {{ $label := $.Page.Scratch.Get (printf "%s-%d-label" $id $idx) }}
+      <label for="tabs-{{ $id }}-{{ $idx }}" id="tabs-{{ $id }}-{{ $idx }}-label">
+        {{ $label }}
+      </label>
+    {{ end }}
+    <div class="book-tabs-slider"></div>
+  </div>
+</div>

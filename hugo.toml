@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Wildfire Lab"
 theme = "ananke" # Or any other theme you prefer
 
+[params]
+  custom_css = ["css/custom.css"] # This tells Ananke to load your custom CSS
+
 [menu]
   [[menu.main]]
     name = "Wildfire Lab"

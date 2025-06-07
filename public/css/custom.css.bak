@@ -1,0 +1,37 @@
+/* filepath: static/css/custom.css */
+.team-member-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.team-member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.team-member-info {
+  flex-grow: 1;
+}
+
+.team-member-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.team-member-info p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.team-member-info strong {
+  color: #333;
+}

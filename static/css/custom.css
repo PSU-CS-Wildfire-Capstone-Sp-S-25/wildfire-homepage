@@ -1,4 +1,14 @@
 /* filepath: static/css/custom.css */
+
+
+
+/* Make homepage content full width */
+body.home .measure,
+body.home .measure-wide,
+body.home .measure-narrow {
+  max-width: none;
+}
+
 .team-member-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -34,4 +44,56 @@
 
 .team-member-info strong {
   color: #333;
+}
+
+/* === ADD THE FOLLOWING CSS FOR TABS === */
+
+/* Basic Tab Functionality - Add your own styling on top */
+
+/* Hide the actual radio buttons */
+.book-tabs input.toggle {
+  display: none;
+}
+
+/* Style for the tab labels (buttons) container */
+.book-tabs-labels {
+  display: flex; /* Arrange labels in a row */
+  border-bottom: 1px solid #dddddd; /* Example border */
+  margin-bottom: -1px; /* Helps align with content border */
+}
+
+.book-tabs-labels label {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: none; /* Labels don't have a bottom border initially */
+  margin-right: 5px;
+  background-color: #f0f0f0; /* Default label background */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+/* Hide all tab content by default */
+.book-tabs-content .book-tabs-content-inner {
+  display: none;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+/* Show content for the checked tab and style the active label */
+/* This assumes your tab group ID in _index.md is "main-content-tabs" */
+/* If you have other tab groups, you'll need to make these more generic or add rules for each ID */
+
+#tabs-main-content-tabs-0:checked ~ .book-tabs-content #tabs-main-content-tabs-0-content,
+#tabs-main-content-tabs-1:checked ~ .book-tabs-content #tabs-main-content-tabs-1-content,
+#tabs-main-content-tabs-2:checked ~ .book-tabs-content #tabs-main-content-tabs-2-content { /* Add more if you have more tabs */
+  display: block;
+}
+
+#tabs-main-content-tabs-0:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-0"],
+#tabs-main-content-tabs-1:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-1"],
+#tabs-main-content-tabs-2:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-2"] { /* Add more if you have more tabs */
+  background-color: #ffffff; /* Active label background (matches content background) */
+  border-color: #dddddd #dddddd transparent #dddddd; /* Border to make it look connected */
+  font-weight: bold;
 }
