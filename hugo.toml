@@ -8,28 +8,28 @@ theme = "ananke" # Or any other theme you prefer
 
 [menu]
   [[menu.main]]
-    name = "Wildfire Lab"
+    name = "Project Description"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Project Design"
-    url = "/project-design/"
+    name = "Team Members"
+    url = "/team/"
     weight = 2
   [[menu.main]]
-    name = "Team"
-    url = "/team/" # Create a team page if needed
+    name = "Wildfire Digital Twin"
+    url = "/wildfire-twin/" # Create page if needed
     weight = 3
   [[menu.main]]
-    name = "Wildfire Twin"
-    url = "/wildfire-twin/" # Create page if needed
+    name = "Dynamic Site" # I assume this is a placeholder?
+    url = "/dynamic-site/" # Create page if needed
     weight = 4
   [[menu.main]]
     name = "AI Tools"
     url = "/ai-tools/" # Create page if needed
     weight = 5
   [[menu.main]]
-    name = "Wildfire Publishing"
-    url = "/wildfire-publishing/" # Create page if needed
+    name = "Sources"
+    url = "/sources/" # Create page if needed
     weight = 6
 
 [markup]
