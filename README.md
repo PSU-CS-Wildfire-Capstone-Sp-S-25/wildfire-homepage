@@ -1,7 +1,5 @@
-# wildfire-homepage
+Clone this branch to check it out branch name: dinhn
 
-## Development:
-Run the site locally with live-reloading: 
-```sh
-hugo server --minify --theme hugo-book
-```
+Use `hugo server` to start the local dev server.
+
+Open the site at: http://localhost:1313/

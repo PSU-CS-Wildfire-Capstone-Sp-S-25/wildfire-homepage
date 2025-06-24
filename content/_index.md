@@ -1,41 +1,18 @@
 ---
-title: Introduction
-type: docs
+title: "PSU Capstone Project for Wildfire Prediction"
 ---
 
-# Acerbo datus maxime
+## Project Description
 
-{{% columns %}}
-## Astris ipse furtiva
+The Wildfire Digital Twin is a capstone project by Portland State University computer science students that aims to create a public website for forecasting weather and the spread of wildfires. In response to the growing cost of wildfires, which cause billions of dollars in damage and significant loss of life and health impacts annually, this project leverages advanced modeling and artificial intelligence to provide critical, timely information. The platform is being developed first for the Pacific Northwest, with a design that allows for future expansion to other regions.
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## Introduction
 
-<--->
+Wildfires represent a critical and escalating threat, inflicting devastating economic, environmental, and human costs. As noted by AccuWeather, the economic toll of a single major wildfire event can soar into the hundreds of billions of dollars, while the health impacts from smoke can lead to thousands of indirect deaths.
 
-## Suis quot vota
+To address this challenge, the Wildfire Digital Twin project is developing a sophisticated forecasting platform. The core of this project is the integration of two powerful technologies:
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{% /columns %}}
+*   **WRF-SFIRE:** A cutting-edge model that simulates the complex, two-way interaction between atmospheric conditions and fire behavior, allowing the fire to influence local weather and vice-versa.
+*   **Artificial Intelligence:** Using NVIDIA's FourCastNet model, the project seeks to make forecasts faster and less computationally expensive than with traditional models. The AI is intended to learn and account for the unknown physics of wildfires at smaller scales, improving the accuracy of predictions.
 
-
-## Tempora nisi nunc
-
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
-
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+The platform will feature a user-friendly website where individuals and emergency responders can report a new fire and receive a forecast of its potential spread. This tool is designed to aid in critical decisions, from mobilizing firefighting resources to planning evacuations. By providing accessible and data-driven predictions, the Wildfire Digital Twin aims to mitigate the destructive power of wildfires and enhance community safety.
