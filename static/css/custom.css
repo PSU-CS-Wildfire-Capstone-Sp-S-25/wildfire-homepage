@@ -1,15 +1,15 @@
 /* filepath: static/css/custom.css */
 
-
-
 /* Make homepage content full width */
-body.home .measure,
-body.home .measure-wide,
-body.home .measure-narrow {
-  max-width: none;
+.measure,
+.measure-wide,
+.measure-narrow {
+  max-width: 75%;
+  width: 75%;
+  text-align: left;
 }
 
-.team-member-card {
+.team-member-card-sponsor {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 20px;
@@ -18,6 +18,28 @@ body.home .measure-narrow {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.team-member-card {
+  text-align: center;
+  width: 140px;
 }
 
 .team-member-card img {
@@ -84,15 +106,29 @@ body.home .measure-narrow {
 /* This assumes your tab group ID in _index.md is "main-content-tabs" */
 /* If you have other tab groups, you'll need to make these more generic or add rules for each ID */
 
-#tabs-main-content-tabs-0:checked ~ .book-tabs-content #tabs-main-content-tabs-0-content,
-#tabs-main-content-tabs-1:checked ~ .book-tabs-content #tabs-main-content-tabs-1-content,
-#tabs-main-content-tabs-2:checked ~ .book-tabs-content #tabs-main-content-tabs-2-content { /* Add more if you have more tabs */
+#tabs-main-content-tabs-0:checked
+  ~ .book-tabs-content
+  #tabs-main-content-tabs-0-content,
+#tabs-main-content-tabs-1:checked
+  ~ .book-tabs-content
+  #tabs-main-content-tabs-1-content,
+#tabs-main-content-tabs-2:checked
+  ~ .book-tabs-content
+  #tabs-main-content-tabs-2-content {
+  /* Add more if you have more tabs */
   display: block;
 }
 
-#tabs-main-content-tabs-0:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-0"],
-#tabs-main-content-tabs-1:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-1"],
-#tabs-main-content-tabs-2:checked ~ .book-tabs-labels label[for="tabs-main-content-tabs-2"] { /* Add more if you have more tabs */
+#tabs-main-content-tabs-0:checked
+  ~ .book-tabs-labels
+  label[for="tabs-main-content-tabs-0"],
+#tabs-main-content-tabs-1:checked
+  ~ .book-tabs-labels
+  label[for="tabs-main-content-tabs-1"],
+#tabs-main-content-tabs-2:checked
+  ~ .book-tabs-labels
+  label[for="tabs-main-content-tabs-2"] {
+  /* Add more if you have more tabs */
   background-color: #ffffff; /* Active label background (matches content background) */
   border-color: #dddddd #dddddd transparent #dddddd; /* Border to make it look connected */
   font-weight: bold;

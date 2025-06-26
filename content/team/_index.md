@@ -1,5 +1,5 @@
 ---
-title: "Our Amazing Team"
+title: "The Wildfire Lab Team"
 ---
 
 ## Meet the Wildfire Lab Team
@@ -10,7 +10,7 @@ We're a dedicated group of experts passionate about wildfire research and techno
 
 ## Mentor
 
-<div class="team-member-card">
+<div class="team-member-card-sponsor">
   <img src="/safamote.jpeg" alt="Dr. Safa Mote">
   <div class="team-member-info">
     <h3>Dr. Safa Mote</h3>
@@ -21,31 +21,71 @@ We're a dedicated group of experts passionate about wildfire research and techno
 
 ---
 
-## Team Lead
+## Team Leads
 
-<div class="team-member-card">
-  <img src="/fire.gif" alt="Catherine">
-  <div class="team-member-info">
-    <h3>Catherine</h3>
-    <p><strong>Role:</strong> Web Developer</p>
-    <p><strong>Bio:</strong> Catherine has over 10 years of experience in web development and wildfire research technology.</p>
+<div class="team-row">
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Nick">
+    <p><strong>Nick</strong></p>
+  </div>
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Gustavo">
+    <p><strong>Gustavo</strong></p>
   </div>
 </div>
 
 ---
 
-## Team Members
+## Website
 
-<div class="team-member-card">
-  <img src="/fire.gif" alt="Max">
-  <div class="team-member-info">
-    <h3>Max</h3>
-    <p><strong>Role:</strong> Web Developer</p>
-    <p><strong>Bio:</strong> Max is a skilled developer specializing in wildfire data visualization and analysis tools.</p>
+<div class="team-row">
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Cathrine">
+    <p><strong>Cathrine</strong></p>
+  </div>
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Max">
+    <p><strong>Max</strong></p>
+  </div>
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Dinh">
+    <p><strong>Dinh</strong></p>
   </div>
 </div>
 
 ---
 
-### [Add More Team Members]
-*More team members will be added as the project grows.*
+## WRF/SFIRE
+
+<div class="team-row">
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Harrison">
+    <p><strong>Harrison</strong></p>
+  </div>
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Robert">
+    <p><strong>Robert</strong></p>
+  </div>
+</div>
+
+---
+
+## HPC/Data
+
+<div class="team-row">
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Ethel">
+    <p><strong>Ethel</strong></p>
+  </div>
+</div>
+
+---
+
+## AI
+
+<div class="team-row">
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Vivi">
+    <p><strong>Vivi</strong></p>
+  </div>
+</div>
