@@ -24,8 +24,8 @@ theme = "ananke" # Or any other theme you prefer
     url = "/dynamic-site/" # Create page if needed
     weight = 4
   [[menu.main]]
-    name = "AI Tools"
-    url = "/ai-tools/" # Create page if needed
+    name = "Model Update"
+    url = "/model-update/" # Create page if needed
     weight = 5
   [[menu.main]]
     name = "Sources"
