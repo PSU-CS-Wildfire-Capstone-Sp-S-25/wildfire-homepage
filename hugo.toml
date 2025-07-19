@@ -1,6 +1,6 @@
 baseURL = "https://yourwebsite.com/" # Replace with your actual URL
 languageCode = "en-us"
-title = "Wildfire Lab"
+title = ""
 theme = "ananke" # Or any other theme you prefer
 
 [params]

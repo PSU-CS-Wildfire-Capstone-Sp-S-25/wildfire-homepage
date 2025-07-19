@@ -1,10 +1,23 @@
 {{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
 {{ if $featured_image }}
   {{ $featured_image_class := site.Params.featured_image_class | default "cover bg-top" }}
-  <header class="{{ $featured_image_class }}" style="background-image: url('{{ "Wildfires.jpeg" | relURL }}');">
+  <header class="{{ $featured_image_class }}" style="background-image: url('{{ "Wildfires.jpeg" | relURL }}'); position: relative;">
     {{ $cover_dimming_class := site.Params.cover_dimming_class | default "bg-black-60" }}
-    <div class="{{ $cover_dimming_class }}">
-      {{ partial "site-navigation.html" .}}
+    <div class="{{ $cover_dimming_class }}" style="position: relative;">
+
+      <!-- 🔥 Fire GIF stacked over Wildfire Lab (top-left corner) -->
+      <a href="/"
+         style="position: absolute; top: 1rem; left: 1rem; z-index: 10; display: flex; flex-direction: column; align-items: center; text-decoration: none; background: transparent;">
+        <img src="/fire.gif" alt="Fire GIF"
+             style="height: 40px; width: auto; background-color: transparent;" />
+        <span style="color: white; font-weight: 700; font-size: 1.2rem; line-height: 1.2; font-family: serif; margin-top: 0.25rem; user-select: none;">
+          Wildfire Lab
+        </span>
+      </a>
+
+      {{ partial "site-navigation.html" . }}
+
+      <!-- 🔤 Original centered site title and description -->
       <div class="tc-l pv2 pv3-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw7 white-90 mb0 lh-title serif">
           {{ .Title | default .Site.Title }}
@@ -18,9 +31,22 @@
     </div>
   </header>
 {{ else }}
-  <header class="cover bg-top" style="background-image: url('{{ "Wildfires.jpeg" | relURL }}');">
-    <div class="bg-black-60">
+  <header class="cover bg-top" style="background-image: url('{{ "Wildfires.jpeg" | relURL }}'); position: relative;">
+    <div class="bg-black-60" style="position: relative;">
+
+      <!-- 🔥 Fire GIF stacked over Wildfire Lab (top-left corner) -->
+      <a href="/"
+         style="position: absolute; top: 1rem; left: 1rem; z-index: 10; display: flex; flex-direction: column; align-items: center; text-decoration: none; background: transparent;">
+        <img src="/fire.gif" alt="Fire GIF"
+             style="height: 40px; width: auto; background-color: transparent;" />
+        <span style="color: white; font-weight: 700; font-size: 1.2rem; line-height: 1.2; font-family: serif; margin-top: 0.25rem; user-select: none;">
+          Wildfire Lab
+        </span>
+      </a>
+
       {{ partial "site-navigation.html" . }}
+
+      <!-- 🔤 Original centered site title and description -->
       <div class="tc-l pv2 pv3-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw7 white-90 mb0 lh-title sans-serif">
           {{ .Title | default .Site.Title }}
