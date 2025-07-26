@@ -2,6 +2,7 @@ baseURL = "https://yourwebsite.com/" # Replace with your actual URL
 languageCode = "en-us"
 title = ""
 theme = "ananke" # Or any other theme you prefer
+copyright = "Portland State University Wildfire Lab" 
 
 [params]
   custom_css = ["css/custom.css"] # This tells Ananke to load your custom CSS

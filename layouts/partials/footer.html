@@ -1,3 +1,3 @@
 <footer>
-    <p>© {{ now.Year }} Wildfire Lab</p>
-  </footer>
+  <p>© {{ now.Year }} {{ .Site.Copyright | safeHTML }}</p>
+</footer>
