@@ -26,11 +26,11 @@ We're a dedicated group of experts passionate about wildfire research and techno
 <div class="team-row">
   <div class="team-member-card">
     <img src="/fire.gif" alt="Nick">
-    <p><strong>Nick</strong></p>
+    <p><strong>Nicholas Phua</strong></p>
   </div>
   <div class="team-member-card">
     <img src="/fire.gif" alt="Gustavo">
-    <p><strong>Gustavo</strong></p>
+    <p><strong>Gustavo Cotom-Lopez</strong></p>
   </div>
 </div>
 
@@ -41,15 +41,15 @@ We're a dedicated group of experts passionate about wildfire research and techno
 <div class="team-row">
   <div class="team-member-card">
     <img src="/fire.gif" alt="Cathrine">
-    <p><strong>Cathrine</strong></p>
+    <p><strong>Catherine Nemec</strong></p>
   </div>
   <div class="team-member-card">
     <img src="/fire.gif" alt="Max">
-    <p><strong>Max</strong></p>
+    <p><strong>Max Rego</strong></p>
   </div>
   <div class="team-member-card">
     <img src="/fire.gif" alt="Dinh">
-    <p><strong>Dinh</strong></p>
+    <p><strong>Dinh Nguyen</strong></p>
   </div>
 </div>
 
@@ -60,11 +60,11 @@ We're a dedicated group of experts passionate about wildfire research and techno
 <div class="team-row">
   <div class="team-member-card">
     <img src="/fire.gif" alt="Harrison">
-    <p><strong>Harrison</strong></p>
+    <p><strong>Harrison Moore</strong></p>
   </div>
   <div class="team-member-card">
     <img src="/fire.gif" alt="Robert">
-    <p><strong>Robert</strong></p>
+    <p><strong>Robert Elia</strong></p>
   </div>
 </div>
 
@@ -75,7 +75,7 @@ We're a dedicated group of experts passionate about wildfire research and techno
 <div class="team-row">
   <div class="team-member-card">
     <img src="/fire.gif" alt="Ethel">
-    <p><strong>Ethel</strong></p>
+    <p><strong>Ethel Arterberry</strong></p>
   </div>
 </div>
 
@@ -86,6 +86,10 @@ We're a dedicated group of experts passionate about wildfire research and techno
 <div class="team-row">
   <div class="team-member-card">
     <img src="/fire.gif" alt="Vivi">
-    <p><strong>Vivi</strong></p>
+    <p><strong>Vivi Chen</strong></p>
+  </div>
+  <div class="team-member-card">
+    <img src="/fire.gif" alt="Ahmed">
+    <p><strong>Ahmed Al-Badri</strong></p>
   </div>
 </div>
