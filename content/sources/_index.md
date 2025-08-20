@@ -98,7 +98,7 @@ https://kcby.com/news/local/cram-fire-grows-to-94293-acres-as-windy-conditions-h
 
 https://inciweb.wildfire.gov/incident-information/orprd-cram-fire Might have to back out and then zoom into the area to get a better, full picture. But also has resources.
 
-### General 2023 Canada Fires
+### General 2023 Canada Fires -
 
 The best I can do here is the wikipedia, The have map data… Maybe we can visualize it ourselves? https://commons.wikimedia.org/wiki/Data:2023_Canadian_wildfires_-_season_to_date.map
 
