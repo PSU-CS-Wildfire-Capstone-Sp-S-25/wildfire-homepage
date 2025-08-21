@@ -1,4 +1,4 @@
-# 🎬 Simulation Showcase: Visualizing a Fire Spread Event
+# Simulation Showcase: Visualizing a Fire Spread Event
 
 Here we showcase sample outputs from a WRF-SFIRE simulation, visualized using `wrfxweb`.
 ### Caldor Fire Progression August 15 - 31
