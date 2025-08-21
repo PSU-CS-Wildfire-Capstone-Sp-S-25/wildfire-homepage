@@ -6,11 +6,12 @@ The Weather Research and Forcasting (WRF) model is a community model, develop jo
 
 ## Global Forecast System (GFS)
 
-The Global Forecast System (GFS) is a model developed by NOAA's National Center for Environmental Prediction (NCEP). It is primarily a US global weather model with development coodination between NOAA and partners like NASA. The model functions as an analysis cycle, updating atmospheric states every 6 hours, within a 6-hour window, using a vasy array of observational data. Its primary application is to provide global forecasts for medium-range weather predition worldwide, and it gives guidance for up to two weeks. This punctuality is a strength, as it fast, has open avalibility, in addition to its timely updates. However, this comes at the cost of resolution, and still does not rival the best global models.
+The Global Forecast System (GFS) is a model developed by NOAA's National Center for Environmental Prediction (NCEP). It is primarily a US global weather model with development coodination between NOAA and partners like NASA, and university researchers via the Unified Forecast System initiative [US Department of Commerce, 2020].
+The model functions as an analysis cycle, updating atmospheric states every 6 hours, within a 6-hour window, using a vasy array of observational data. Its primary application is to provide global forecasts for medium-range weather predition worldwide, and it gives guidance for up to two weeks. This punctuality is a strength, as it fast, has open avalibility, in addition to its timely updates. However, this comes at the cost of resolution, and still does not rival the best global models [US Department of Commerce, 2020].
 
 ## ECMWF Integrated Forecasting System (IFS)
 
-The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating System (ECMWF IFS) is a model developed by 30 international organizations and supported by over 30 European states. Renown for its leading global forecasting skill, IFS includes advance physics parameterization, which is continually updated and optimized for the IFS physics.
+The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating System (ECMWF IFS) is a model developed by 30 international organizations and supported by over 30 European states. Renown for its leading global forecasting skill, IFS includes advance physics parameterization, which is continually updated and optimized for the IFS physics. It uses about 137 vertical levels, and orecasts are projected out to 10 days at full resolution and extended to 15 days with slightly coarser resolution beyond 10 days [COMMpla|Trust-IT, 2022].
 
 ---
 
@@ -18,18 +19,18 @@ The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating 
 
 ## FourCastNet (NVIDIA)
 
-FourCastNet is a deep learning weather model developed by NVIDIA that uses adaptive Fourier neural operators to emulate global weather forecasting. It produces accurate short to medium range predictions, matching the accuracy of Numerical Weather Predition model EXMWF IFS. The primary strength of the model is its speed, generating a week-long global forecast in under two seconds. However, the model is limited by longer-range accuracy for certain atmospheric fields, lagging behind the top physics-based models.
+FourCastNet is a deep learning weather model developed by NVIDIA that uses adaptive Fourier neural operators to emulate global weather forecasting. It produces accurate short to medium range predictions, matching the accuracy of Numerical Weather Predition model EXMWF IFS. The primary strength of the model is its speed, generating a week-long global forecast in under two seconds. However, the model is limited by longer-range accuracy for certain atmospheric fields, lagging behind the top physics-based models [Pathak et al., 2022].
 
 ## GraphCast (DeepMind)
 
-GraphCast is a global weather forecasting system developed by Google DeepMind, that leverages a graph neural network architecture to predict atmospheric dynamics. It is trained on decades of historical reanalysis data, and can predict the temporal evolution of hundreds of meteorological variables up to 10 days into the future. It significantly outpreforms ECMWF's IFS on 90% of evaluated targets, improving tropical cyclone tracks, atmospheric river forecasts, and heat wave prediction. This 10 day forcast can be done under 1 minute, on a single TPU, reducing computational cost, but still remaining computationally intensive.
+GraphCast is a global weather forecasting system developed by Google DeepMind, that leverages a graph neural network architecture to predict atmospheric dynamics. It is trained on decades of historical reanalysis data, and can predict the temporal evolution of hundreds of meteorological variables up to 10 days into the future. It significantly outpreforms ECMWF's IFS on 90% of evaluated targets, improving tropical cyclone tracks, atmospheric river forecasts, and heat wave prediction. This 10 day forcast can be done under 1 minute, on a single TPU, reducing computational cost, but still remaining computationally intensive [Lam et al., 2023].
 
 ## Pangu-Weather (Huawei)
 
-Pangu-Weather is a A transformer-based AI model developed by Huawei. It employs a three-dimentional Earth-specific Tranformer architecture that is designed to incorperated the vertical structure of the atmosphere. Pangu-Weather was the first AI model to exceed ECMWF's IFS in deterministic forecast accuracy across all evaluated variables and lead times when tested on 39 years of reanalysis data. It also demostrated superior skill for predicting extreme weather events. Once trained, the model can generate 10000 times faster than IFS, however this comes at the cost of training, involving significant computational resources.
+Pangu-Weather is a A transformer-based AI model developed by Huawei. It employs a three-dimentional Earth-specific Tranformer architecture that is designed to incorperated the vertical structure of the atmosphere. Pangu-Weather was the first AI model to exceed ECMWF's IFS in deterministic forecast accuracy across all evaluated variables and lead times when tested on 39 years of reanalysis data. It also demostrated superior skill for predicting extreme weather events. Once trained, the model can generate 10000 times faster than IFS, however this comes at the cost of training, involving significant computational resources [Bi et al.,2022].
 
 ## Aurora (Microsoft)
 
-Aurora is a deep learning model developed by Microsoft, designed to handle multiple domains, including weather, air quality, and ocean prediction under a single framework. It is pretrained on over a million hours of climate and weather data, and can be fine-tuned for a specific task with minimal training. It can deliver state-of-the-art accuracy across multiple domains, often outperforming specialized operational models, while remaining faster.
+Aurora is a deep learning model developed by Microsoft, designed to handle multiple domains, including weather, air quality, and ocean prediction under a single framework. It is pretrained on over a million hours of climate and weather data, and can be fine-tuned for a specific task with minimal training. It can deliver state-of-the-art accuracy across multiple domains, often outperforming specialized operational models, while remaining faster. Its main strength is adaptability, enabling rapid deployment for new forecasting applications [Bodnar et al., 2024].
 
 ## Comparative Overview
