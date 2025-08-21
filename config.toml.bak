@@ -2,6 +2,9 @@ baseURL = "https://yourwebsite.com/" # Replace with your actual URL
 languageCode = "en-us"
 title = "Wildfire Lab"
 theme = "ananke" # Or any other theme you prefer
+[markup.goldmark.renderer]
+unsafe = true
+
 
 [menu]
   [[menu.main]]

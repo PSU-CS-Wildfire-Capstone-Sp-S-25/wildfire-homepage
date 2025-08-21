@@ -100,12 +100,18 @@ https://inciweb.wildfire.gov/incident-information/orprd-cram-fire Might have to 
 
 ### General 2023 Canada Fires -
 
-The best I can do here is the wikipedia, The have map data… Maybe we can visualize it ourselves? https://commons.wikimedia.org/wiki/Data:2023_Canadian_wildfires_-_season_to_date.map
+<iframe src="https://commons.wikimedia.org/wiki/Data:2023_Canadian_wildfires_-_season_to_date.map?embed=true" width="600" height="450" frameborder="0" allowfullscreen></iframe>
 
-I feel like this fire is too broad for images, it’s an entire country…
+[Go to Full Site](https://commons.wikimedia.org/wiki/Data:2023_Canadian_wildfires_-_season_to_date.map)
+
 
 ## Acknowledgements
 
-- ![ESTO Logo](https://esto.nasa.gov/wp-content/uploads/2020/02/esto-logo-white.svg) <br> National Aeronautics and Space Administration (NASA) FireSense Research Grant “Wildfire Digital Twin”, Earth Science and Technology Office
-- ![NSF Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NSF_logo.svg/1200px-NSF_logo.svg.png) ![ORCA logo](https://orca.pdx.edu/logo.png)<br>National Science Foundation Computational Award: Oregon Research Computing Accelerator (ORCA)
+- <img src="https://esto.nasa.gov/wp-content/uploads/2020/02/esto-logo-white.svg" alt="ESTO Logo" width="120">  
+  National Aeronautics and Space Administration (NASA) FireSense Research Grant “Wildfire Digital Twin”, Earth Science and Technology Office
+
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NSF_logo.svg/1200px-NSF_logo.svg.png" alt="NSF Logo" width="100"> 
+  <img src="https://orca.pdx.edu/logo.png" alt="ORCA Logo" width="100">  
+  National Science Foundation Computational Award: Oregon Research Computing Accelerator (ORCA)
+
 - Notion provided free access to Notion Plus for our group
