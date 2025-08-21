@@ -2,25 +2,25 @@
 title: "PSU Capstone Project for Wildfire Prediction"
 ---
 
-## 🌲 Project Description
+## Project Description
 
 To be updated.
 
 ---
 
-## 🔥 Introduction
+## Introduction
 
 To be updated.
 
 ---
 
-## 🛠️ How We Started
+## How We Started
 
 To be updated.
 
 ---
 
-## 💡 What We've Come Up With
+## What We've Come Up With
 
 Short Description of the tool we have come up with
 
