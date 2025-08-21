@@ -1,4 +1,4 @@
-# 🔥 Numerical Weather Prediction Models
+# Numerical Weather Prediction Models
 
 ## Weather Research and Forecasting (WRF)
 
@@ -15,7 +15,7 @@ The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating 
 
 ---
 
-# 🤖 Deep Learning Weather Prediction
+# Deep Learning Weather Prediction
 
 ## FourCastNet (NVIDIA)
 
@@ -34,3 +34,7 @@ Pangu-Weather is a A transformer-based AI model developed by Huawei. It employs 
 Aurora is a deep learning model developed by Microsoft, designed to handle multiple domains, including weather, air quality, and ocean prediction under a single framework. It is pretrained on over a million hours of climate and weather data, and can be fine-tuned for a specific task with minimal training. It can deliver state-of-the-art accuracy across multiple domains, often outperforming specialized operational models, while remaining faster. Its main strength is adaptability, enabling rapid deployment for new forecasting applications [Bodnar et al., 2024].
 
 ## Comparative Overview
+FourCastNet, GraphCast, Pangu-Weather, and Aurora represents significant advancements in AI-based weather forecasting, yet they differ in their core approaches and strengths. FourCastNet uses Fourier neural operators to achieve extremely fast global forecasts and supports large ensemble generation, though
+with slightly reduced long-range accuracy in its initial version [Pathak et al 2022]. GraphCast applies GNNs to model spatial relationships, achieving high accuracy in extreme event prediction and medium-range forecasting efficiency
+
+## Train FourCastNet
