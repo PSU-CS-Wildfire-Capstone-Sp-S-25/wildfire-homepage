@@ -1,11 +1,13 @@
-## Project Description
 
-The Wildfire Digital Twin is a Portland State University capstone project to build a public website for forecasting wildfire spread and weather. By combining advanced modeling and AI, the platform delivers timely, critical information to help reduce wildfire impacts. The initial focus is the Pacific Northwest, with plans to expand to other regions.
+<h1 style="text-align:center; font-size:2.5rem; color:#111; margin-bottom:1.1rem; margin-top:2.2rem; font-weight:800; letter-spacing:0.01em; font-family: 'Segoe UI', 'Arial', sans-serif;">
+Wildfire forecasts and simulations for everyone.<br>
+<span style="font-size:1.15rem; font-weight:400; color:#444;">See how wildfires might spread—powered by real models and AI.</span>
+</h1>
 
 ## Introduction
+Wildfires represent a critical and escalating threat, inflicting devastating economic, environmental, and human costs. The financial toll of a single major wildfire event can soar into the hundreds of billions of dollars, while the health impacts from smoke can lead to thousands of indirect deaths.
 
-Wildfires represent a critical and escalating threat, inflicting devastating economic, environmental, and human costs. As noted by AccuWeather, the financial toll of a single major wildfire event can soar into the hundreds of billions of dollars, while the health impacts from smoke can lead to thousands of indirect deaths.
-To address this challenge, the Wildfire Digital Twin project is developing a sophisticated forecasting platform. The core of this project is the integration of two powerful technologies:
+To address this challenge, our Capstone Project made this forecasting platform. 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2.5rem 0 2rem 0;">
     <div style="flex: 1 1 400px; max-width: 500px; min-width: 250px; display: flex; flex-direction: column; align-items: center;">
@@ -24,10 +26,7 @@ To address this challenge, the Wildfire Digital Twin project is developing a sop
     </div>
 </div>
 
+## Technologies Used
 
 *   **WRF-SFIRE:** A cutting-edge model that simulates the complex, two-way interaction between atmospheric conditions and fire behavior, allowing the fire to influence local weather and vice-versa.
 *   **Artificial Intelligence:** Using NVIDIA's FourCastNet model, the project seeks to make forecasts faster and less computationally expensive than with traditional models. The AI is intended to learn and account for the unknown physics of wildfires at smaller scales, improving the accuracy of predictions.
-
----
-The platform will feature a user-friendly website where individuals and emergency responders can report a new fire and receive a forecast of its potential spread. This tool is designed to aid in critical decisions, from mobilizing firefighting resources to planning evacuations. By providing accessible and data-driven predictions, the Wildfire Digital Twin aims to mitigate the destructive power of wildfires and enhance community safety.
----
