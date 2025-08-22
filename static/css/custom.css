@@ -1,3 +1,32 @@
+/* Make the Sources menu item bold */
+nav a {
+  font-weight: bold;
+}
+/* Improve top menu link readability and clickability */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline-block;
+  margin-right: 24px;
+}
+nav a {
+  font-size: 1.15rem;
+  padding: 12px 18px;
+  color: #1a237e;
+  background: #e3e6f3;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(60,60,60,0.06);
+}
+nav a:hover, nav a:focus {
+  background: #3949ab;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+}
 /* filepath: static/css/custom.css */
 
 /* Make homepage content full width */

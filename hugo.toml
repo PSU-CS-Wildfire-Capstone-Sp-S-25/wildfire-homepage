@@ -17,21 +17,34 @@ copyright = "Portland State University Wildfire Lab"
     url = "/team/"
     weight = 2
   [[menu.main]]
-    name = "Wildfire Digital Twin"
+  name = "Climate Models Overview"
     url = "/wildfire-twin/" # Create page if needed
     weight = 3
   [[menu.main]]
-    name = "Dynamic Site" # I assume this is a placeholder?
-    url = "/dynamic-site/" # Create page if needed
-    weight = 4
+  name = "Wildfire\nSimulations"
+  url = "/dynamic-site/"
+  weight = 4
   [[menu.main]]
     name = "Model Update"
     url = "/model-update/" # Create page if needed
     weight = 5
+
   [[menu.main]]
     name = "Sources"
     url = "/sources/" # Create page if needed
-    weight = 6
+    weight = 9
+
+  [[menu.main]]
+
+  name = "WRF + SFIRE\nMethods"
+  url = "/dynamical-methods/"
+  weight = 7
+
+  [[menu.main]]
+
+  name = "FourCastNet\nMethods"
+  url = "/ai-methods/"
+  weight = 8
 
 [markup]
   [markup.goldmark]
