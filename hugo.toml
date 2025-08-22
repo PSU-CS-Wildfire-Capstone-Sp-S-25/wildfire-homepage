@@ -27,12 +27,12 @@ copyright = "Portland State University Wildfire Lab"
   [[menu.main]]
     name = "Model Update"
     url = "/model-update/" # Create page if needed
-    weight = 5
+    weight = 98
 
   [[menu.main]]
     name = "Sources"
     url = "/sources/" # Create page if needed
-    weight = 9
+    weight = 99
 
   [[menu.main]]
 
