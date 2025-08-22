@@ -17,13 +17,13 @@ copyright = "Portland State University Wildfire Lab"
     url = "/team/"
     weight = 2
   [[menu.main]]
-  name = "Climate Models Overview"
+    name = "Climate Models Overview"
     url = "/wildfire-twin/" # Create page if needed
     weight = 3
   [[menu.main]]
-  name = "Wildfire\nSimulations"
-  url = "/dynamic-site/"
-  weight = 4
+  name = "Wildfire Simulations"
+    url = "/dynamic-site/"
+    weight = 4
   [[menu.main]]
     name = "Model Update"
     url = "/model-update/" # Create page if needed
@@ -35,16 +35,13 @@ copyright = "Portland State University Wildfire Lab"
     weight = 99
 
   [[menu.main]]
-
-  name = "WRF + SFIRE\nMethods"
-  url = "/dynamical-methods/"
-  weight = 7
-
+  name = "WRF + SFIRE Methods"
+    url = "/dynamical-methods/"
+    weight = 7
   [[menu.main]]
-
-  name = "FourCastNet\nMethods"
-  url = "/ai-methods/"
-  weight = 8
+  name = "FourCastNet Methods"
+    url = "/ai-methods/"
+    weight = 8
 
 [markup]
   [markup.goldmark]

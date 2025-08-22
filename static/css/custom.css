@@ -21,7 +21,7 @@
 }
 .team-list li:hover {
   box-shadow: 0 4px 16px rgba(60,60,60,0.12);
-  background: #e3e6f3;
+  /* background: #e3e6f3; */
 }
 /* Make the Sources menu item bold */
 nav a {
@@ -38,19 +38,16 @@ nav li {
   margin-right: 24px;
 }
 nav a {
-  font-size: 1.15rem;
-  padding: 12px 18px;
-  color: #1a237e;
-  background: #e3e6f3;
-  border-radius: 6px;
+  color: #222b5c;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 4px rgba(60,60,60,0.06);
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
 }
 nav a:hover, nav a:focus {
-  background: #3949ab;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+  text-decoration: underline;
+  color: #3949ab;
 }
 /* filepath: static/css/custom.css */
 
