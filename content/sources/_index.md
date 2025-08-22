@@ -107,11 +107,24 @@ We use the following data sources for our project:
 
 ## Acknowledgements
 
-- <img src="https://esto.nasa.gov/wp-content/uploads/2020/02/esto-logo-white.svg" alt="ESTO Logo" width="120">  
-  National Aeronautics and Space Administration (NASA) FireSense Research Grant “Wildfire Digital Twin”, Earth Science and Technology Office
 
-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NSF_logo.svg/1200px-NSF_logo.svg.png" alt="NSF Logo" width="100"> 
-  <img src="https://orca.pdx.edu/logo.png" alt="ORCA Logo" width="100">  
-  National Science Foundation Computational Award: Oregon Research Computing Accelerator (ORCA)
-
-- Notion provided free access to Notion Plus for our group
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+		<div style="flex: 1; min-width: 220px; text-align: center; margin-bottom: 24px; background: #232946; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px 10px; box-shadow: 0 2px 8px rgba(60,60,60,0.06);">
+			<div style="background: #232946; display: inline-block; border-radius: 8px; padding: 8px 8px 4px 8px;">
+				<img src="https://esto.nasa.gov/wp-content/uploads/2020/02/esto-logo-white.svg" alt="ESTO Logo" width="120" style="background: #232946; border-radius: 8px;">
+			</div><br>
+			<div style="margin-top: 10px; font-weight: bold; color: #fff;">NASA FireSense</div>
+			<div style="margin-top: 8px; color: #fff;">National Aeronautics and Space Administration (NASA) FireSense Research Grant “Wildfire Digital Twin”, Earth Science and Technology Office</div>
+		</div>
+	<div style="flex: 1; min-width: 220px; text-align: center; margin-bottom: 24px;">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NSF_logo.svg/1200px-NSF_logo.svg.png" alt="NSF Logo" width="80"><br>
+		<img src="https://orca.pdx.edu/logo.png" alt="ORCA Logo" width="80" style="margin-top: 8px;"><br>
+		<div style="margin-top: 10px; font-weight: bold;">NSF & ORCA</div>
+		<div style="margin-top: 8px;">National Science Foundation Computational Award: Oregon Research Computing Accelerator (ORCA)</div>
+	</div>
+	<div style="flex: 1; min-width: 220px; text-align: center; margin-bottom: 24px; background: #f5f7fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px 10px; box-shadow: 0 2px 8px rgba(60,60,60,0.06);">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" width="60"><br>
+		<div style="margin-top: 10px; font-weight: bold;">Notion</div>
+		<div style="margin-top: 8px;">Notion provided free access to Notion Plus for our group</div>
+	</div>
+</div>
