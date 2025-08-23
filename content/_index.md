@@ -33,12 +33,11 @@ Models & Technologies Used
 </h2>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin: 2.5rem 0 2rem 0;">
-        <div style="flex: 1 1 340px; max-width: 400px; min-width: 240px; background: #f7f8fa; border-radius: 14px; box-shadow: 0 2px 12px rgba(60,60,60,0.09); padding: 2rem 1.2rem 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
-            <img src="/NVIDIA-logo-BL.jpeg" alt="NVIDIA Logo" style="width: 100%; max-width: 180px; height: auto; margin-bottom: 0.7rem; margin-top: -0.5rem; display: block; object-fit: contain;">
-            <h3 style="color:#222; font-size:1.35rem; margin-bottom:0.7rem; text-align:center;">NVIDIA FourCastNet</h3>
-            <p style="color:#333; font-size:1.05rem; text-align:center; margin-bottom:1.1rem;">A state-of-the-art AI model for fast, accurate weather and climate forecasting. FourCastNet uses deep learning to predict complex atmospheric patterns, making wildfire spread simulations faster and more efficient.</p>
-            <a href="https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-sym/user_guide/neural_operators/fourcastnet.html" target="_blank" style="color:#3949ab; text-decoration:underline; font-weight:500;">Learn more</a>
-        </div>
+    <div style="flex: 1 1 340px; max-width: 400px; min-width: 240px; background: #f7f8fa; border-radius: 14px; box-shadow: 0 2px 12px rgba(60,60,60,0.09); padding: 2rem 1.2rem 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="color:#222; font-size:1.35rem; margin-bottom:0.7rem; text-align:center;">NVIDIA FourCastNet</h3>
+        <p style="color:#333; font-size:1.05rem; text-align:center; margin-bottom:1.1rem;">A state-of-the-art AI model for fast, accurate weather and climate forecasting. FourCastNet uses deep learning to predict complex atmospheric patterns, making wildfire spread simulations faster and more efficient.</p>
+        <a href="https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-sym/user_guide/neural_operators/fourcastnet.html" target="_blank" style="color:#3949ab; text-decoration:underline; font-weight:500;">Learn more</a>
+    </div>
         <div style="flex: 1 1 340px; max-width: 400px; min-width: 240px; background: #f7f8fa; border-radius: 14px; box-shadow: 0 2px 12px rgba(60,60,60,0.09); padding: 2rem 1.2rem 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
             <img src="/NSF_Logo.png" alt="NSF Logo" style="width: 100%; max-width: 180px; height: auto; margin-bottom: 0.7rem; margin-top: -0.5rem; display: block; object-fit: contain;">
             <h3 style="color:#222; font-size:1.35rem; margin-bottom:0.7rem; text-align:center;">WRF-SFIRE</h3>

@@ -1,4 +1,3 @@
-
 <h1 style="text-align:center; font-size:2.2rem; color:#1a237e; margin-bottom:2.2rem; font-weight:800; letter-spacing:0.01em; font-family: 'Segoe UI', 'Arial', sans-serif;">Weather Models Overview</h1>
 <style>
 .model-tile {
@@ -44,7 +43,14 @@
 					<p style="color:#333; font-size:1.01rem; text-align:center;">Europe's leading global model, renowned for forecast skill and advanced physics. IFS provides up to 15-day forecasts with high vertical resolution and continual updates.</p>
 				</a>
 	</div>
-
+	<!-- FourCastNet -->
+	<div style="flex: 1 1 340px; max-width: 400px; min-width: 240px; background: #f7f8fa; border-radius: 14px; box-shadow: 0 2px 12px rgba(60,60,60,0.09); padding: 1.5rem 1.2rem 1.2rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
+		<a href="#fourcastnet" class="model-tile">
+			<h3 style="color:#222; font-size:1.18rem; margin-bottom:0.7rem; text-align:center;">FourCastNet (NVIDIA)</h3>
+			<div style="text-align:center; color:#1a237e; font-size:1.01rem; font-weight:bold; margin-bottom:0.5rem;"><strong>Click here for more info</strong></div>
+			<p style="color:#333; font-size:1.01rem; text-align:center;">A deep learning model by NVIDIA using Fourier neural operators for fast, accurate global weather forecasts. Excels at short- to medium-range predictions with high speed.</p>
+		</a>
+	</div>
 	<!-- GraphCast -->
 	<div style="flex: 1 1 340px; max-width: 400px; min-width: 240px; background: #f7f8fa; border-radius: 14px; box-shadow: 0 2px 12px rgba(60,60,60,0.09); padding: 1.5rem 1.2rem 1.2rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
 					<a href="#graphcast" class="model-tile">
@@ -114,7 +120,15 @@ The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating 
 <a href="https://www.ecmwf.int/en/forecasts" target="_blank" rel="noopener noreferrer"><strong>COMMpla|Trust-IT, 2022 (ECMWF Forecasts)</strong></a>
 </div>
 
-
+<div id="fourcastnet"></div>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/NVIDIA-logo-BL.jpeg" alt="FourCastNet Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">FourCastNet (NVIDIA)</h3>
+</div>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+FourCastNet is a deep learning weather model developed by NVIDIA that uses adaptive Fourier neural operators to emulate global weather forecasting. It produces accurate short to medium range predictions, matching the accuracy of Numerical Weather Predition model EXMWF IFS. The primary strength of the model is its speed, generating a week-long global forecast in under two seconds. However, the model is limited by longer-range accuracy for certain atmospheric fields, lagging behind the top physics-based models.<br>
+<a href="https://arxiv.org/abs/2202.11214" target="_blank" rel="noopener noreferrer"><strong>Pathak et al., 2022 (arXiv)</strong></a>
+</div>
 
 <div id="graphcast"></div>
 <div style="margin-top:2.2rem; text-align:center;">
@@ -146,4 +160,4 @@ Aurora is a deep learning model developed by Microsoft, designed to handle multi
 <a href="http://arxiv.org/abs/2405.13063" target="_blank" rel="noopener noreferrer"><strong>Bodnar et al., 2024 (arXiv)</strong></a>
 </div>
 
----
+-----
