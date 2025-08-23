@@ -92,52 +92,73 @@
 <h2 style="text-align:center; font-size:1.7rem; color:#222; margin-bottom:2.2rem; font-weight:700;">Detailed Model Descriptions</h2>
 
 <div id="wrf"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/wrf.png" alt="WRF Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">Weather Research and Forecasting (WRF)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/wrf.png" alt="WRF Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">Weather Research and Forecasting (WRF)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">The Weather Research and Forcasting (WRF) model is a community model, develop jointly by the National Center for Atmospheric Research (NCAR) and multiple US agencies such as the NOAA, NCEP, and the Air Force. It is regional-based and can be configured to work across multiple scales, though commonly used at mesoscale. WRFs primary application comes from it flexability, and can be tooled for multiple uses, often by coupling with WRF. This leads to many WRF extensions, like WRF-Chem, WRF-Hydro, and WRF-Fire, which specialize in paticulars like severe weather, and storm-scale predictions. This is a strength, as it is has community backing, giving it a multitude of options and capabilites for various applications. However, WRF does has weaknesses, it being a limited-area model makes it depend on external boundary conditions that lead to lateral bonundary errors over a long run time. It also features multiple dynamic cores, which necessitates a CPU-intensive approach.</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+The Weather Research and Forcasting (WRF) model is a community model, develop jointly by the National Center for Atmospheric Research (NCAR) and multiple US agencies such as the NOAA, NCEP, and the Air Force. It is regional-based and can be configured to work across multiple scales, though commonly used at mesoscale. WRFs primary application comes from it flexability, and can be tooled for multiple uses, often by coupling with WRF. This leads to many WRF extensions, like WRF-Chem, WRF-Hydro, and WRF-Fire, which specialize in paticulars like severe weather, and storm-scale predictions. This is a strength, as it is has community backing, giving it a multitude of options and capabilites for various applications. However, WRF does has weaknesses, it being a limited-area model makes it depend on external boundary conditions that lead to lateral bonundary errors over a long run time. It also features multiple dynamic cores, which necessitates a CPU-intensive approach.<br>
+<a href="https://www.mmm.ucar.edu/weather-research-and-forecasting-model" target="_blank" rel="noopener noreferrer"><strong>WRF Model Home</strong></a>
+</div>
 
 <div id="gfs"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/gfs.png" alt="GFS Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">Global Forecast System (GFS)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/gfs.png" alt="GFS Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">Global Forecast System (GFS)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">The Global Forecast System (GFS) is a model developed by NOAA's National Center for Environmental Prediction (NCEP). It is primarily a US global weather model with development coodination between NOAA and partners like NASA, and university researchers via the Unified Forecast System initiative [US Department of Commerce, 2020].<br>The model functions as an analysis cycle, updating atmospheric states every 6 hours, within a 6-hour window, using a vasy array of observational data. Its primary application is to provide global forecasts for medium-range weather predition worldwide, and it gives guidance for up to two weeks. This punctuality is a strength, as it fast, has open avalibility, in addition to its timely updates. However, this comes at the cost of resolution, and still does not rival the best global models [US Department of Commerce, 2020].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+The Global Forecast System (GFS) is a model developed by NOAA's National Center for Environmental Prediction (NCEP). It is primarily a US global weather model with development coodination between NOAA and partners like NASA, and university researchers via the Unified Forecast System initiative [US Department of Commerce, 2020].<br>The model functions as an analysis cycle, updating atmospheric states every 6 hours, within a 6-hour window, using a vasy array of observational data. Its primary application is to provide global forecasts for medium-range weather predition worldwide, and it gives guidance for up to two weeks. This punctuality is a strength, as it fast, has open avalibility, in addition to its timely updates. However, this comes at the cost of resolution, and still does not rival the best global models [US Department of Commerce, 2020].<br>
+<a href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs" target="_blank" rel="noopener noreferrer"><strong>GFS Model Info</strong></a>
+</div>
 
 <div id="ifs"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/ifs.jpg" alt="IFS Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">ECMWF Integrated Forecasting System (IFS)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/ifs.jpg" alt="IFS Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">ECMWF Integrated Forecasting System (IFS)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating System (ECMWF IFS) is a model developed by 30 international organizations and supported by over 30 European states. Renown for its leading global forecasting skill, IFS includes advance physics parameterization, which is continually updated and optimized for the IFS physics. It uses about 137 vertical levels, and orecasts are projected out to 10 days at full resolution and extended to 15 days with slightly coarser resolution beyond 10 days [COMMpla|Trust-IT, 2022].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+The European Centre for Medium-Range Weather Forecasts's Intergrated Forecating System (ECMWF IFS) is a model developed by 30 international organizations and supported by over 30 European states. Renown for its leading global forecasting skill, IFS includes advance physics parameterization, which is continually updated and optimized for the IFS physics. It uses about 137 vertical levels, and orecasts are projected out to 10 days at full resolution and extended to 15 days with slightly coarser resolution beyond 10 days [COMMpla|Trust-IT, 2022].<br>
+<a href="https://www.ecmwf.int/en/research/modelling-and-prediction/modelling-and-forecasting-system" target="_blank" rel="noopener noreferrer"><strong>IFS Model Info</strong></a>
+</div>
 
 <div id="fourcastnet"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/NVIDIA-logo-BL.jpeg" alt="FourCastNet Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">FourCastNet (NVIDIA)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/NVIDIA-logo-BL.jpeg" alt="FourCastNet Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">FourCastNet (NVIDIA)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">FourCastNet is a deep learning weather model developed by NVIDIA that uses adaptive Fourier neural operators to emulate global weather forecasting. It produces accurate short to medium range predictions, matching the accuracy of Numerical Weather Predition model EXMWF IFS. The primary strength of the model is its speed, generating a week-long global forecast in under two seconds. However, the model is limited by longer-range accuracy for certain atmospheric fields, lagging behind the top physics-based models [Pathak et al., 2022].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+FourCastNet is a deep learning weather model developed by NVIDIA that uses adaptive Fourier neural operators to emulate global weather forecasting. It produces accurate short to medium range predictions, matching the accuracy of Numerical Weather Predition model EXMWF IFS. The primary strength of the model is its speed, generating a week-long global forecast in under two seconds. However, the model is limited by longer-range accuracy for certain atmospheric fields, lagging behind the top physics-based models.<br>
+<a href="https://www.nature.com/articles/s42256-022-00565-7" target="_blank" rel="noopener noreferrer"><strong>Pathak et al., 2022 (Nature Machine Intelligence)</strong></a>
+</div>
 
 <div id="graphcast"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/DeepMind_logo.png" alt="GraphCast Logo (Google DeepMind)" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">GraphCast (Google DeepMind)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/DeepMind_logo.png" alt="GraphCast Logo (Google DeepMind)" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">GraphCast (Google DeepMind)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">GraphCast is a global weather forecasting system developed by Google DeepMind, that leverages a graph neural network architecture to predict atmospheric dynamics. It is trained on decades of historical reanalysis data, and can predict the temporal evolution of hundreds of meteorological variables up to 10 days into the future. It significantly outpreforms ECMWF's IFS on 90% of evaluated targets, improving tropical cyclone tracks, atmospheric river forecasts, and heat wave prediction. This 10 day forcast can be done under 1 minute, on a single TPU, reducing computational cost, but still remaining computationally intensive [Lam et al., 2023].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+GraphCast is a global weather forecasting system developed by Google DeepMind, that leverages a graph neural network architecture to predict atmospheric dynamics. It is trained on decades of historical reanalysis data, and can predict the temporal evolution of hundreds of meteorological variables up to 10 days into the future. It significantly outpreforms ECMWF's IFS on 90% of evaluated targets, improving tropical cyclone tracks, atmospheric river forecasts, and heat wave prediction. This 10 day forcast can be done under 1 minute, on a single TPU, reducing computational cost, but still remaining computationally intensive.<br>
+<a href="https://www.science.org/doi/10.1126/science.ade7254" target="_blank" rel="noopener noreferrer"><strong>Lam et al., 2023 (Science)</strong></a>
+</div>
 
 <div id="pangu"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/Huawei_Standard_logo.svg" alt="Pangu-Weather Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">Pangu-Weather (Huawei)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/Huawei_Standard_logo.svg" alt="Pangu-Weather Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">Pangu-Weather (Huawei)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">Pangu-Weather is a A transformer-based AI model developed by Huawei. It employs a three-dimentional Earth-specific Tranformer architecture that is designed to incorperated the vertical structure of the atmosphere. Pangu-Weather was the first AI model to exceed ECMWF's IFS in deterministic forecast accuracy across all evaluated variables and lead times when tested on 39 years of reanalysis data. It also demostrated superior skill for predicting extreme weather events. Once trained, the model can generate 10000 times faster than IFS, however this comes at the cost of training, involving significant computational resources [Bi et al.,2022].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+Pangu-Weather is a transformer-based AI model developed by Huawei. It employs a three-dimentional Earth-specific Tranformer architecture that is designed to incorperated the vertical structure of the atmosphere. Pangu-Weather was the first AI model to exceed ECMWF's IFS in deterministic forecast accuracy across all evaluated variables and lead times when tested on 39 years of reanalysis data. It also demostrated superior skill for predicting extreme weather events. Once trained, the model can generate 10000 times faster than IFS, however this comes at the cost of training, involving significant computational resources.<br>
+<a href="https://www.nature.com/articles/s41586-022-04754-0" target="_blank" rel="noopener noreferrer"><strong>Bi et al., 2022 (Nature)</strong></a>
+</div>
 
 <div id="aurora"></div>
-<div style="display:flex; align-items:center; gap:1rem; margin-top:2.2rem;">
-	<img src="/Microsoft_logo.svg" alt="Aurora Logo" style="width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff;">
-	<h3 style="color:#1a237e; margin:0;">Aurora (Microsoft)</h3>
+<div style="margin-top:2.2rem; text-align:center;">
+	<img src="/Microsoft_logo.svg" alt="Aurora Logo" style="width: 100%; max-width: 220px; height: 220px; border-radius: 18px; object-fit: contain; background: #fff; display:block; margin:0 auto 0.7rem auto;">
+	<h3 style="color:#1a237e; margin:0; text-align:center; width:100%;">Aurora (Microsoft)</h3>
 </div>
-<p style="max-width:700px; margin-bottom:2.2rem;">Aurora is a deep learning model developed by Microsoft, designed to handle multiple domains, including weather, air quality, and ocean prediction under a single framework. It is pretrained on over a million hours of climate and weather data, and can be fine-tuned for a specific task with minimal training. It can deliver state-of-the-art accuracy across multiple domains, often outperforming specialized operational models, while remaining faster. Its main strength is adaptability, enabling rapid deployment for new forecasting applications [Bodnar et al., 2024].</p>
+<div style="max-width:700px; margin-bottom:2.2rem; margin-left:auto; margin-right:auto; text-align:center;">
+Aurora is a deep learning model developed by Microsoft, designed to handle multiple domains, including weather, air quality, and ocean prediction under a single framework. It is pretrained on over a million hours of climate and weather data, and can be fine-tuned for a specific task with minimal training. It can deliver state-of-the-art accuracy across multiple domains, often outperforming specialized operational models, while remaining faster. Its main strength is adaptability, enabling rapid deployment for new forecasting applications.<br>
+<a href="https://arxiv.org/abs/2402.00849" target="_blank" rel="noopener noreferrer"><strong>Bodnar et al., 2024 (arXiv)</strong></a>
+</div>
 
 ---
