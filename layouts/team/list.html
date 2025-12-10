@@ -1,0 +1,132 @@
+{{ define "main" }}
+  <section class="about-hero ember-bg">
+    <div class="about-hero-inner">
+      <h1>Seven Teams, One Mission</h1>
+    </div>
+    <div class="about-hero-flares" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="about-hero-wave" aria-hidden="true"></div>
+    <div class="about-hero-wave second" aria-hidden="true"></div>
+    <div class="about-hero-wave third" aria-hidden="true"></div>
+    <div class="about-hero-overlay" aria-hidden="true"></div>
+    <div class="about-hero-bottom-glow" aria-hidden="true"></div>
+  </section>
+  <section class="team-section">
+    <div class="team-grid">
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/acamaro-cutcher.jpg" alt="Photo of Acamaro Cutcher" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Acamaro Cutcher</h3>
+          <div class="badge-role">Team Lead</div>
+          <ul class="member-points">
+            <li>Delegating tasks to each team member</li>
+            <li>Specifying Project design</li>
+            <li>Providing Technical Support to all team members</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/bradley-chang.jpg" alt="Photo of Bradley Chang" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Bradley Chang</h3>
+          <div class="badge-role">Website Developer / Data Acquisition</div>
+          <ul class="member-points">
+            <li>Developing and updating the CS capstone website to showcase the group’s personal information and documentation/data, display sample forecast runs, and save user fire spreads requests.</li>
+            <li>Organizing, documenting, and saving weather data and wildfire spread/perimeter data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/hemu-babis.jpg" alt="Photo of Hemu Babis" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Hemu Babis</h3>
+          <div class="badge-role">Website Developer / Data Acquisition</div>
+          <ul class="member-points">
+            <li>Developing and updating the CS capstone website to showcase the group’s personal information and documentation/data, display sample forecast runs, and save user fire spreads requests.</li>
+            <li>Organizing, documenting, and saving weather data and wildfire spread/perimeter data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/hassan-abdi.jpg" alt="Photo of Hassan Abdi" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Hassan Abdi</h3>
+          <div class="badge-role">WRF‑SFIRE Developer</div>
+          <ul class="member-points">
+            <li>Researching, configuring, and operating the WRF-SFIRE coupled model to generate a forecast of fire behavior and smoke prediction.</li>
+            <li>Physics-Informed Data Generation: Generate high-fidelity simulations from WRF-SFIRE to generate large, quality-controlled datasets for AI training, ensuring our AI model (Fourcasnet) learns from realistic, physics-based scenarios.</li>
+            <li>Model-2-AI Integration: Translating complex physical outputs (fire perimeter/spread rate, smoke dispersion, etc.) into formats suitable for Fourcasnet’s architecture.</li>
+            <li>Validation: Ensure accuracy of training model from WRF-SFIRE output data and observational data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/matthew-tan.jpg" alt="Photo of Matthew Tan" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Matthew Tan</h3>
+          <div class="badge-role">WRF‑SFIRE Developer</div>
+          <ul class="member-points">
+            <li>Researching, configuring, and operating the WRF-SFIRE coupled model to generate a forecast of fire behavior and smoke prediction.</li>
+            <li>Physics-Informed Data Generation: Generate high-fidelity simulations from WRF-SFIRE to generate large, quality-controlled datasets for AI training, ensuring our AI model (Fourcasnet) learns from realistic, physics-based scenarios.</li>
+            <li>Model-2-AI Integration: Translating complex physical outputs (fire perimeter/spread rate, smoke dispersion, etc.) into formats suitable for Fourcasnet’s architecture.</li>
+            <li>Validation: Ensure accuracy of the training model from WRF-SFIRE output data and observational data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/joel-garcia-cervantes.jpg" alt="Photo of Joel Garcia‑Cervantes" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Joel Garcia‑Cervantes</h3>
+          <div class="badge-role">Deep Learning (AI) Developer</div>
+          <ul class="member-points">
+            <li>Develop and manage a robust data workflow (pipeline) that will bridge the gap between WRF-SFIRE high-resolution, regional output, which includes fire-specific variables such as fire-spread and smoke dispersion, to the global FourCastNet AI weather model, enabling data-driven fire weather forecasting.</li>
+            <li>Training and fine-tuning the FourCastNet model using massive, high-fidelity High-Performance Computing-generated datasets from WRF-SFIRE simulations, converting raw output into formats optimized for GPU-accelerated training.</li>
+            <li>Developing a post-processing pipeline to ingest FourCastNet output into the WRFweb visualization system, similar to the WRFxpy code base.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="member-card">
+        <div class="member-photo">
+          <img src="/team/alvaro-bazan.jpg" alt="Photo of Alvaro Bazan" onerror="this.onerror=null;this.src='/team/placeholder.svg';">
+        </div>
+        <div class="member-body">
+          <h3 class="member-name">Alvaro Bazan</h3>
+          <div class="badge-role">Deep Learning (AI) Developer</div>
+          <ul class="member-points">
+            <li>Develop and manage a robust data workflow (pipeline) that will bridge the gap between WRF-SFIRE high-resolution, regional output, which includes fire-specific variables such as fire-spread and smoke dispersion, to the global FourCastNet AI weather model, enabling data-driven fire weather forecasting.</li>
+            <li>Training and fine-tuning the FourCastNet model using massive, high-fidelity High-Performance Computing-generated datasets from WRF-SFIRE simulations, converting raw output into formats optimized for GPU-accelerated training.</li>
+            <li>Developing a post-processing pipeline to ingest FourCastNet output into the WRFweb visualization system, similar to the WRFxpy code base.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about-callout">
+    <div class="callout-card">
+      <h3>Collaboration fuels the mission</h3>
+      <p>From physics‑driven simulation to AI‑accelerated inference, each member brings unique strengths that make this wildfire digital twin possible.</p>
+    </div>
+    <div class="sparks" aria-hidden="true"></div>
+    <div class="sparks second" aria-hidden="true"></div>
+  </section>
+{{ end }}
