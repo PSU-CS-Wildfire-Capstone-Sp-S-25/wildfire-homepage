@@ -21,9 +21,17 @@ copyright = "Portland State University Wildfire Lab"
     url = "/wildfire-twin/" # Create page if needed
     weight = 3
   [[menu.main]]
+  identifier = "wildfire-simulations"
   name = "Wildfire Simulations"
     url = "/dynamic-site/"
     weight = 4
+
+  # Sub-item under Wildfire Simulations
+  [[menu.main]]
+    name = "Ignition Request and Fire Visualization"
+    url = "/dynamic-site/wrfxctrl-testing/"
+    parent = "wildfire-simulations"
+    weight = 40
   [[menu.main]]
     name = "Model Update"
     url = "/model-update/" # Create page if needed

@@ -49,6 +49,42 @@ nav a:hover, nav a:focus {
   text-decoration: underline;
   color: #3949ab;
 }
+
+/* Dropdown submenu styling */
+nav li.has-children { position: relative; }
+nav li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  padding: 8px 0;
+  min-width: 220px;
+  z-index: 50;
+}
+nav li.has-children:hover > .submenu { display: block; }
+nav li .submenu li { display: block; margin: 0; }
+nav li .submenu a {
+  display: block;
+  padding: 8px 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #222b5c;
+}
+nav li .submenu a:hover { background: #f5f7fa; color: #3949ab; text-decoration: none; }
+
+/* WRFxCtrl testing page images: scale but never crop */
+.wrfximg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto 1.25rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-radius: 6px;
+}
 /* ---- About the Team page styles ---- */
 .about-hero {
   position: relative;
@@ -198,6 +234,45 @@ nav a:hover, nav a:focus {
 /* Mosaic sizing */
 .card--feature { grid-column: span 6; grid-row: span 24; }
 .card--wide { grid-column: span 4; grid-row: span 16; }
+
+/* === Sponsor banner (separate from grid) === */
+.sponsor-banner {
+  max-width: 1100px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #efe7df;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(4,16,32,.08);
+  padding: 12px 16px;
+}
+.sponsor-banner-photo img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 6px 16px rgba(4,16,32,.12);
+}
+.sponsor-banner-body { display: flex; flex-direction: column; gap: 4px; }
+.sponsor-banner-name { margin: 0; font-size: 1.15rem; color: #0b0f1a; }
+.sponsor-banner-badge {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #6a3700;
+  background: #fff5e6;
+  border: 1px solid #ffd28a;
+  border-radius: 999px;
+  padding: .18rem .6rem;
+  width: fit-content;
+}
+@media (max-width: 560px) {
+  .sponsor-banner-photo img { width: 72px; height: 72px; }
+}
 .card--tall { grid-column: span 3; grid-row: span 22; }
 .card--accent { position: relative; }
 .card--accent::after { content:""; position:absolute; inset:-1px; border-radius:22px; pointer-events:none; background: linear-gradient(120deg, rgba(255,140,0,.25), rgba(255,193,7,.25)); mix-blend: overlay; }
@@ -395,5 +470,32 @@ nav a:hover, nav a:focus {
   /* Add more if you have more tabs */
   background-color: #ffffff; /* Active label background (matches content background) */
   border-color: #dddddd #dddddd transparent #dddddd; /* Border to make it look connected */
+  font-weight: bold;
+}
+
+/* Generic rules for the wrfxweb tab group */
+#tabs-wrfxweb-0:checked
+  ~ .book-tabs-content
+  #tabs-wrfxweb-0-content,
+#tabs-wrfxweb-1:checked
+  ~ .book-tabs-content
+  #tabs-wrfxweb-1-content,
+#tabs-wrfxweb-2:checked
+  ~ .book-tabs-content
+  #tabs-wrfxweb-2-content {
+  display: block;
+}
+
+#tabs-wrfxweb-0:checked
+  ~ .book-tabs-labels
+  label[for="tabs-wrfxweb-0"],
+#tabs-wrfxweb-1:checked
+  ~ .book-tabs-labels
+  label[for="tabs-wrfxweb-1"],
+#tabs-wrfxweb-2:checked
+  ~ .book-tabs-labels
+  label[for="tabs-wrfxweb-2"] {
+  background-color: #ffffff;
+  border-color: #dddddd #dddddd transparent #dddddd;
   font-weight: bold;
 }

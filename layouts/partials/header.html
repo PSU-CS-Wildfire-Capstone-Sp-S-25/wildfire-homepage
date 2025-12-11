@@ -1,9 +1,18 @@
 <header>
-    <nav>
-      <ul>
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+  <nav>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li class="{{ if .HasChildren }}has-children{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .HasChildren }}
+          <ul class="submenu">
+            {{ range .Children }}
+              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
         {{ end }}
-      </ul>
-    </nav>
-  </header>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
