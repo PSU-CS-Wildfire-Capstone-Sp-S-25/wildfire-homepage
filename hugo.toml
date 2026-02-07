@@ -33,6 +33,11 @@ copyright = "Portland State University Wildfire Lab"
     parent = "wildfire-simulations"
     weight = 40
   [[menu.main]]
+    name = "Ignition Request Portal (Concept UI)"
+    url = "/dynamic-site/ignition-portal/"
+    parent = "wildfire-simulations"
+    weight = 30
+  [[menu.main]]
     name = "Model Update"
     url = "/model-update/" # Create page if needed
     weight = 98

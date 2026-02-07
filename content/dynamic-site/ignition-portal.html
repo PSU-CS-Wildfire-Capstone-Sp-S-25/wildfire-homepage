@@ -1,0 +1,196 @@
+---
+title: "Ignition Request Portal (Concept UI)"
+---
+
+<div class="dynamic-portal">
+  <section class="portal-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">WRFxctrl-inspired request flow</p>
+      <h1>Launch a new fire simulation with a modern, operator-ready GUI.</h1>
+      <p class="lede">This concept focuses on the two core components you described: a user submission workflow backed by Postgres, and a live-updating globe that highlights requested ignition points.</p>
+      <div class="hero-actions">
+        <button class="primary" type="button" data-scroll-target="#request-form">Start a request</button>
+        <button class="ghost" type="button" data-scroll-target="#admin-console">View admin console</button>
+      </div>
+      <div class="hero-badges">
+        <span>Postgres-backed queue</span>
+        <span>Real-time map updates</span>
+        <span>Operator audit trail</span>
+      </div>
+    </div>
+    <div class="hero-status">
+      <div class="status-card">
+        <p class="label">Active requests</p>
+        <p class="value" id="active-count">8</p>
+        <p class="meta">Last sync <span id="last-sync">just now</span></p>
+      </div>
+      <div class="status-card">
+        <p class="label">Avg. queue time</p>
+        <p class="value">37 min</p>
+        <p class="meta">Based on last 14 runs</p>
+      </div>
+      <div class="status-card">
+        <p class="label">System health</p>
+        <p class="value good">Operational</p>
+        <p class="meta">wrfxpy + wrfxweb connected</p>
+      </div>
+    </div>
+    <div class="hero-noise" aria-hidden="true"></div>
+  </section>
+
+  <section class="portal-grid">
+    <div class="panel form-panel" id="request-form">
+      <div class="panel-header">
+        <h2>Ignition request</h2>
+        <p>Submit a run, then the system admin can approve, queue, or retire it when completed.</p>
+      </div>
+      <form class="request-form" id="ignition-form">
+        <div class="field-group">
+          <div class="field">
+            <label for="request-lat">Ignition latitude</label>
+            <input id="request-lat" name="lat" type="number" step="0.0001" min="-90" max="90" placeholder="38.7160" required>
+          </div>
+          <div class="field">
+            <label for="request-lon">Ignition longitude</label>
+            <input id="request-lon" name="lon" type="number" step="0.0001" min="-180" max="180" placeholder="-120.2341" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="request-model">Simulation type</label>
+          <select id="request-model" name="model" required>
+            <option value="dynamical" selected>Dynamical (WRF-SFIRE)</option>
+            <option value="ai">AI-generated</option>
+            <option value="both">Both (AI + Dynamical)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="request-datetime">Ignition date + time (local)</label>
+          <input id="request-datetime" name="datetime" type="datetime-local" required>
+        </div>
+        <div class="field">
+          <label for="request-label">Run label</label>
+          <input id="request-label" name="label" type="text" placeholder="Caldor replicates - 3km grid" required>
+        </div>
+        <div class="field">
+          <label for="request-notes">Notes for the operator</label>
+          <textarea id="request-notes" name="notes" rows="3" placeholder="Add forecast length, domain settings, or data constraints."></textarea>
+        </div>
+        <div class="form-footer">
+          <div class="pill">Storage: Postgres + object store outputs</div>
+          <button class="primary" type="submit">Submit request</button>
+        </div>
+        <p class="helper">Tip: click the globe to auto-fill latitude and longitude. A job ID is generated on submit.</p>
+      </form>
+      <div class="toast" id="submit-toast" role="status" aria-live="polite">Request added to the queue.</div>
+    </div>
+
+    <div class="panel globe-panel">
+      <div class="panel-header">
+        <h2>Live request globe</h2>
+        <p>Interactive projection showing queued ignition points. Updates every few minutes from the database.</p>
+      </div>
+      <div class="globe-shell">
+        <canvas id="globe-canvas" width="520" height="520" aria-label="Interactive globe"></canvas>
+        <svg class="globe-fallback" viewBox="0 0 520 520" aria-hidden="true">
+          <defs>
+            <radialGradient id="ocean" cx="35%" cy="30%" r="65%">
+              <stop offset="0%" stop-color="#2d6f7e"/>
+              <stop offset="60%" stop-color="#0d3946"/>
+              <stop offset="100%" stop-color="#071f26"/>
+            </radialGradient>
+          </defs>
+          <circle cx="260" cy="260" r="220" fill="url(#ocean)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+          <g stroke="rgba(255,255,255,0.18)" stroke-width="1">
+            <circle cx="260" cy="260" r="150" fill="none"/>
+            <circle cx="260" cy="260" r="100" fill="none"/>
+            <ellipse cx="260" cy="260" rx="220" ry="70" fill="none"/>
+            <ellipse cx="260" cy="260" rx="220" ry="130" fill="none"/>
+          </g>
+          <g fill="#f4b74a">
+            <circle cx="315" cy="190" r="6"/>
+            <circle cx="210" cy="280" r="6"/>
+            <circle cx="360" cy="300" r="6"/>
+          </g>
+        </svg>
+        <div class="globe-overlay">
+          <div class="globe-chip">Sync interval: 2 min</div>
+          <div class="globe-chip">Click to set coordinates</div>
+        </div>
+      </div>
+      <div class="globe-legend">
+        <div>
+          <span class="dot queued"></span>
+          <span>Queued</span>
+        </div>
+        <div>
+          <span class="dot running"></span>
+          <span>Running</span>
+        </div>
+        <div>
+          <span class="dot complete"></span>
+          <span>Completed</span>
+        </div>
+      </div>
+      <div class="request-list" id="request-list"></div>
+    </div>
+  </section>
+
+  <section class="portal-lower">
+    <div class="panel admin-panel" id="admin-console">
+      <div class="panel-header">
+        <h2>Admin console (operator view)</h2>
+        <p>System admins can review, cancel, or clear completed jobs. This can be a separate web UI or terminal tool.</p>
+      </div>
+      <div class="admin-table" id="admin-table"></div>
+      <div class="admin-actions">
+        <button class="ghost" type="button" id="export-csv">Export queue CSV</button>
+        <button class="ghost" type="button" id="refresh-queue">Refresh now</button>
+      </div>
+    </div>
+
+    <div class="panel plan-panel">
+      <div class="panel-header">
+        <h2>Feature plan &amp; data flow</h2>
+        <p>Suggested implementation plan to keep the pipeline clean and auditable.</p>
+      </div>
+      <ol class="plan-list">
+        <li><strong>Request intake API</strong> (POST `/api/ignitions`) validates fields, writes to Postgres, and returns job id.</li>
+        <li><strong>Queue service</strong> polls for new requests, triggers wrfxpy jobs, and updates status + log pointers.</li>
+        <li><strong>Globe updater</strong> reads request table every 2 minutes and streams deltas to the UI.</li>
+        <li><strong>Admin controls</strong> support cancel + archive actions, plus run metadata and audit trail.</li>
+        <li><strong>Notifications</strong> alert users on submit, start, completion, and failure.</li>
+      </ol>
+      <div class="schema-card">
+        <p class="schema-title">Postgres core tables</p>
+        <ul>
+          <li>`ignition_requests` (id, lat, lon, model_type, ignition_time, status, created_at)</li>
+          <li>`simulation_runs` (id, request_id, wrfx_job_id, status, logs_url, updated_at)</li>
+          <li>`run_events` (id, run_id, event_type, payload, created_at)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="portal-notes">
+    <div class="panel note-panel">
+      <h2>Integration notes</h2>
+      <p>This front-end assumes a REST API and Postgres backend. The globe and tables are wired to demo data today, but the JS is ready to swap in real endpoints.</p>
+      <div class="note-grid">
+        <div>
+          <h3>Auth</h3>
+          <p>Recommend SSO or token-based access for admin actions.</p>
+        </div>
+        <div>
+          <h3>Data cadence</h3>
+          <p>UI polls every 2 minutes, with optional websocket for live steps.</p>
+        </div>
+        <div>
+          <h3>Outputs</h3>
+          <p>Link wrfxweb visualization URLs directly from the run table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="/js/wrfxctrl-demo.js" defer></script>
