@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://yourwebsite.com/dynamic-site/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Portland State University Wildfire Lab</copyright>
+    <atom:link href="https://yourwebsite.com/dynamic-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ignition Request Portal (Concept UI)</title>
+      <link>https://yourwebsite.com/dynamic-site/ignition-portal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yourwebsite.com/dynamic-site/ignition-portal/</guid>
+      <description>&lt;div class=&#34;dynamic-portal&#34;&gt;&#xA;  &lt;section class=&#34;portal-hero&#34;&gt;&#xA;    &lt;div class=&#34;hero-copy&#34;&gt;&#xA;      &lt;p class=&#34;eyebrow&#34;&gt;WRFxctrl-inspired request flow&lt;/p&gt;&#xA;      &lt;h1&gt;Launch a new fire simulation with a modern, operator-ready GUI.&lt;/h1&gt;&#xA;      &lt;p class=&#34;lede&#34;&gt;This concept focuses on the two core components you described: a user submission workflow backed by Postgres, and a live-updating globe that highlights requested ignition points.&lt;/p&gt;&#xA;      &lt;div class=&#34;hero-actions&#34;&gt;&#xA;        &lt;button class=&#34;primary&#34; type=&#34;button&#34; data-scroll-target=&#34;#request-form&#34;&gt;Start a request&lt;/button&gt;&#xA;        &lt;button class=&#34;ghost&#34; type=&#34;button&#34; data-scroll-target=&#34;#admin-console&#34;&gt;View admin console&lt;/button&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;hero-badges&#34;&gt;&#xA;        &lt;span&gt;Postgres-backed queue&lt;/span&gt;&#xA;        &lt;span&gt;Real-time map updates&lt;/span&gt;&#xA;        &lt;span&gt;Operator audit trail&lt;/span&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;hero-status&#34;&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;Active requests&lt;/p&gt;&#xA;        &lt;p class=&#34;value&#34; id=&#34;active-count&#34;&gt;8&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;Last sync &lt;span id=&#34;last-sync&#34;&gt;just now&lt;/span&gt;&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;Avg. queue time&lt;/p&gt;&#xA;        &lt;p class=&#34;value&#34;&gt;37 min&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;Based on last 14 runs&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;System health&lt;/p&gt;&#xA;        &lt;p class=&#34;value good&#34;&gt;Operational&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;wrfxpy + wrfxweb connected&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;hero-noise&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section class=&#34;portal-grid&#34;&gt;&#xA;    &lt;div class=&#34;panel form-panel&#34; id=&#34;request-form&#34;&gt;&#xA;      &lt;div class=&#34;panel-header&#34;&gt;&#xA;        &lt;h2&gt;Ignition request&lt;/h2&gt;&#xA;        &lt;p&gt;Submit a run, then the system admin can approve, queue, or retire it when completed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

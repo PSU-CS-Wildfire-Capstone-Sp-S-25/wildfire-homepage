@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Team group photo placeholder</title>
+  <desc id="desc">Placeholder artwork for the team page group photo slot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#103d4d"/>
+      <stop offset="52%" stop-color="#1f5f73"/>
+      <stop offset="100%" stop-color="#d46a2b"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="228" cy="112" r="290" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="1420" cy="70" r="340" fill="rgba(255,215,180,0.22)"/>
+  <circle cx="1418" cy="852" r="390" fill="rgba(16,61,77,0.35)"/>
+  <rect x="86" y="86" width="1428" height="728" rx="34" fill="url(#glass)" stroke="rgba(255,255,255,0.42)" stroke-width="4"/>
+  <rect x="126" y="126" width="1348" height="648" rx="24" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.28)" stroke-width="3" stroke-dasharray="12 10"/>
+
+  <g fill="rgba(255,255,255,0.92)">
+    <circle cx="620" cy="395" r="48"/>
+    <circle cx="800" cy="355" r="55"/>
+    <circle cx="980" cy="395" r="48"/>
+    <rect x="555" y="448" width="130" height="132" rx="58"/>
+    <rect x="720" y="420" width="160" height="168" rx="70"/>
+    <rect x="915" y="448" width="130" height="132" rx="58"/>
+  </g>
+
+  <g fill="rgba(255,255,255,0.82)">
+    <rect x="760" y="610" width="80" height="56" rx="12"/>
+    <circle cx="800" cy="638" r="15" fill="rgba(16,61,77,0.62)"/>
+    <rect x="784" y="597" width="32" height="13" rx="5"/>
+  </g>
+</svg>

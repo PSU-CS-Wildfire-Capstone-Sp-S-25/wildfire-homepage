@@ -26,12 +26,6 @@ copyright = "Portland State University Wildfire Lab"
     url = "/dynamic-site/"
     weight = 4
 
-  # Sub-item under Wildfire Simulations
-  [[menu.main]]
-    name = "Ignition Request and Fire Visualization"
-    url = "/dynamic-site/wrfxctrl-testing/"
-    parent = "wildfire-simulations"
-    weight = 40
   [[menu.main]]
     name = "Ignition Request Portal (Concept UI)"
     url = "/dynamic-site/ignition-portal/"

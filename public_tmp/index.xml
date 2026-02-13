@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://yourwebsite.com/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Portland State University Wildfire Lab</copyright>
+    <atom:link href="https://yourwebsite.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://yourwebsite.com/ai-methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yourwebsite.com/ai-methods/</guid>
+      <description>&lt;h1 id=&#34;fourcastnet-methods&#34;&gt;FourCastNet Methods&lt;/h1&gt;&#xA;&lt;p&gt;FourCastNet is a deep learning–based weather forecasting model developed initially by NVIDIA. Unlike traditional numerical models that rely solely on physics-based equations, FCN uses a transformer-style neural network (called Adaptive Fourier Neural Operators, or AFNOs) to learn global atmospheric dynamics directly from reanalysis data. By combining speed with accuracy, FCN can generate weather forecasts orders of magnitude faster than conventional approaches, while maintaining competitive skill scores.&#xA;Why did we choose FCN?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://yourwebsite.com/dynamical-methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yourwebsite.com/dynamical-methods/</guid>
+      <description>&lt;h1 id=&#34;wrf-sfire-simulation-guide-with-wrfxpy&#34;&gt;WRF-SFIRE Simulation Guide with WRFxPy&lt;/h1&gt;&#xA;&lt;p&gt;This guide outlines the complete process for creating and running wildfire simulations using wrfxpy with wrf-sfire.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-create-spack-package-for-wrf-sfire&#34;&gt;1. Create Spack Package for WRF-SFIRE&lt;/h3&gt;&#xA;&lt;p&gt;First, you&amp;rsquo;ll need the custom spack package for wrf-sfire:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Repository&lt;/strong&gt;: &lt;a href=&#34;https://github.com/PSU-CS-Wildfire-Capstone-Sp-S-25/wf-capstone-docker/blob/main/package.py&#34;&gt;wrf-sfire spack package&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-install-required-packages-with-spack&#34;&gt;2. Install Required Packages with Spack&lt;/h3&gt;&#xA;&lt;p&gt;Install the necessary spack packages:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Install wrf-sfire spack package&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;spack install wrf-sfire&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Install WPS (WRF Preprocessing System)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;spack install wps&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-install-wrfxpy&#34;&gt;3. Install wrfxpy&lt;/h3&gt;&#xA;&lt;p&gt;Install the forked version of wrfxpy:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ignition Request Portal (Concept UI)</title>
+      <link>https://yourwebsite.com/dynamic-site/ignition-portal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yourwebsite.com/dynamic-site/ignition-portal/</guid>
+      <description>&lt;div class=&#34;dynamic-portal&#34;&gt;&#xA;  &lt;section class=&#34;portal-hero&#34;&gt;&#xA;    &lt;div class=&#34;hero-copy&#34;&gt;&#xA;      &lt;p class=&#34;eyebrow&#34;&gt;WRFxctrl-inspired request flow&lt;/p&gt;&#xA;      &lt;h1&gt;Launch a new fire simulation with a modern, operator-ready GUI.&lt;/h1&gt;&#xA;      &lt;p class=&#34;lede&#34;&gt;This concept focuses on the two core components you described: a user submission workflow backed by Postgres, and a live-updating globe that highlights requested ignition points.&lt;/p&gt;&#xA;      &lt;div class=&#34;hero-actions&#34;&gt;&#xA;        &lt;button class=&#34;primary&#34; type=&#34;button&#34; data-scroll-target=&#34;#request-form&#34;&gt;Start a request&lt;/button&gt;&#xA;        &lt;button class=&#34;ghost&#34; type=&#34;button&#34; data-scroll-target=&#34;#admin-console&#34;&gt;View admin console&lt;/button&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;hero-badges&#34;&gt;&#xA;        &lt;span&gt;Postgres-backed queue&lt;/span&gt;&#xA;        &lt;span&gt;Real-time map updates&lt;/span&gt;&#xA;        &lt;span&gt;Operator audit trail&lt;/span&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;hero-status&#34;&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;Active requests&lt;/p&gt;&#xA;        &lt;p class=&#34;value&#34; id=&#34;active-count&#34;&gt;8&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;Last sync &lt;span id=&#34;last-sync&#34;&gt;just now&lt;/span&gt;&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;Avg. queue time&lt;/p&gt;&#xA;        &lt;p class=&#34;value&#34;&gt;37 min&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;Based on last 14 runs&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;status-card&#34;&gt;&#xA;        &lt;p class=&#34;label&#34;&gt;System health&lt;/p&gt;&#xA;        &lt;p class=&#34;value good&#34;&gt;Operational&lt;/p&gt;&#xA;        &lt;p class=&#34;meta&#34;&gt;wrfxpy + wrfxweb connected&lt;/p&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;hero-noise&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section class=&#34;portal-grid&#34;&gt;&#xA;    &lt;div class=&#34;panel form-panel&#34; id=&#34;request-form&#34;&gt;&#xA;      &lt;div class=&#34;panel-header&#34;&gt;&#xA;        &lt;h2&gt;Ignition request&lt;/h2&gt;&#xA;        &lt;p&gt;Submit a run, then the system admin can approve, queue, or retire it when completed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PSU Capstone Project for Wildfire Prediction</title>
+      <link>https://yourwebsite.com/bypass_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yourwebsite.com/bypass_index/</guid>
+      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;&#xA;&lt;p&gt;The Wildfire Digital Twin is a capstone project by Portland State University computer science students that aims to create a public website for forecasting weather and the spread of wildfires. In response to the growing cost of wildfires, which cause billions of dollars in damage and significant loss of life and health impacts annually, this project leverages advanced modeling and artificial intelligence to provide critical, timely information. The platform is being developed first for the Pacific Northwest, with a design that allows for future expansion to other regions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
