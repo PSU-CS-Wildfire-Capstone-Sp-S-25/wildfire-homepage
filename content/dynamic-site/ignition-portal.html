@@ -1,6 +1,8 @@
 ---
 title: "Ignition Request Portal (Concept UI)"
 ---
+<script src="https://unpkg.com/d3@7"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
 
 <div class="dynamic-portal">
   <section class="portal-hero">
@@ -10,7 +12,7 @@ title: "Ignition Request Portal (Concept UI)"
       <p class="lede">This concept focuses on the two core components you described: a user submission workflow backed by Postgres, and a live-updating globe that highlights requested ignition points.</p>
       <div class="hero-actions">
         <button class="primary" type="button" data-scroll-target="#request-form">Start a request</button>
-        <button class="ghost" type="button" data-scroll-target="#admin-console">View admin console</button>
+        <a class="ghost" href="/admin/login/" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">Admin login</a>
       </div>
       <div class="hero-badges">
         <span>Postgres-backed queue</span>
@@ -90,31 +92,15 @@ title: "Ignition Request Portal (Concept UI)"
         <p>Interactive projection showing queued ignition points. Updates every few minutes from the database.</p>
       </div>
       <div class="globe-shell">
-        <canvas id="globe-canvas" width="520" height="520" aria-label="Interactive globe"></canvas>
-        <svg class="globe-fallback" viewBox="0 0 520 520" aria-hidden="true">
-          <defs>
-            <radialGradient id="ocean" cx="35%" cy="30%" r="65%">
-              <stop offset="0%" stop-color="#2d6f7e"/>
-              <stop offset="60%" stop-color="#0d3946"/>
-              <stop offset="100%" stop-color="#071f26"/>
-            </radialGradient>
-          </defs>
-          <circle cx="260" cy="260" r="220" fill="url(#ocean)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
-          <g stroke="rgba(255,255,255,0.18)" stroke-width="1">
-            <circle cx="260" cy="260" r="150" fill="none"/>
-            <circle cx="260" cy="260" r="100" fill="none"/>
-            <ellipse cx="260" cy="260" rx="220" ry="70" fill="none"/>
-            <ellipse cx="260" cy="260" rx="220" ry="130" fill="none"/>
-          </g>
-          <g fill="#f4b74a">
-            <circle cx="315" cy="190" r="6"/>
-            <circle cx="210" cy="280" r="6"/>
-            <circle cx="360" cy="300" r="6"/>
-          </g>
-        </svg>
+        <div id="globe-map" class="globe-map" aria-label="Interactive globe map"></div>
+        <div id="globe-tooltip" class="globe-tooltip" style="display:none;"></div>
         <div class="globe-overlay">
-          <div class="globe-chip">Sync interval: 2 min</div>
-          <div class="globe-chip">Click to set coordinates</div>
+          <div class="globe-chip">Sync interval: 10 sec</div>
+          <div class="globe-chip">Drag to rotate, wheel to zoom, click to set coordinates</div>
+          <div class="globe-chip">
+            <button id="globe-zoom-out" type="button" aria-label="Zoom out">-</button>
+            <button id="globe-zoom-in" type="button" aria-label="Zoom in">+</button>
+          </div>
         </div>
       </div>
       <div class="globe-legend">
@@ -136,18 +122,6 @@ title: "Ignition Request Portal (Concept UI)"
   </section>
 
   <section class="portal-lower">
-    <div class="panel admin-panel" id="admin-console">
-      <div class="panel-header">
-        <h2>Admin console (operator view)</h2>
-        <p>System admins can review, cancel, or clear completed jobs. This can be a separate web UI or terminal tool.</p>
-      </div>
-      <div class="admin-table" id="admin-table"></div>
-      <div class="admin-actions">
-        <button class="ghost" type="button" id="export-csv">Export queue CSV</button>
-        <button class="ghost" type="button" id="refresh-queue">Refresh now</button>
-      </div>
-    </div>
-
     <div class="panel plan-panel">
       <div class="panel-header">
         <h2>Feature plan &amp; data flow</h2>
@@ -193,4 +167,4 @@ title: "Ignition Request Portal (Concept UI)"
   </section>
 </div>
 
-<script src="/js/wrfxctrl-demo.js" defer></script>
+<script src="/js/wrfxctrl-demo.js?v=20260224k" defer></script>

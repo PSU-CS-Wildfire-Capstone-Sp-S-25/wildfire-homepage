@@ -1,0 +1,25 @@
+---
+title: "Admin Login"
+omit_header_text: true
+---
+
+<div class="wf-shell">
+  <section class="wf-card wf-auth-card">
+    <p class="wf-eyebrow">Restricted Access</p>
+    <h1>Admin Login</h1>
+    <p class="wf-subtext">Only authorized admins can view and manage submitted jobs.</p>
+
+    <form id="admin-login-form" class="wf-form">
+      <label for="admin-username">Username</label>
+      <input id="admin-username" name="username" type="text" autocomplete="username" required>
+
+      <label for="admin-password">Password</label>
+      <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit" class="wf-btn-primary">Sign In</button>
+      <p id="admin-login-message" class="wf-message" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</div>
+
+<script src="/js/admin-login.js" defer></script>

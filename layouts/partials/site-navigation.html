@@ -19,14 +19,14 @@
         <ul class="nav-links {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
           {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }} {{ if .HasChildren }}has-children{{ end }}">
-            <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+            <a class="hover-white white-90 no-underline" href="{{ if compare.Eq .URL "/" }}{{ $.Site.Home.RelPermalink }}{{ else }}{{ .URL | relURL }}{{ end }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
             {{ if .HasChildren }}
             <ul class="submenu">
               {{ range .Children }}
               <li class="list f6 fw5 db" style="margin:0;">
-                <a class="no-underline" href="{{ .URL }}" style="display:block; padding:8px 14px; color:#222b5c;">
+                <a class="no-underline" href="{{ .URL | relURL }}" style="display:block; padding:8px 14px; color:#222b5c;">
                   {{ .Name }}
                 </a>
               </li>

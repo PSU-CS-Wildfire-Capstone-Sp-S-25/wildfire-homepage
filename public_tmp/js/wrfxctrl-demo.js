@@ -1,5 +1,7 @@
 (() => {
+  const API_BASE = "http://127.0.0.1:8787/api";
   const state = {
+    apiEnabled: false,
     rotation: 0,
     syncSeconds: 0,
     requests: [
@@ -86,6 +88,27 @@
     setTimeout(() => toast.classList.remove("show"), 2600);
   };
 
+  const apiUrl = (path) => `${API_BASE}${path}`;
+
+  const fetchJson = async (path, options = {}) => {
+    const response = await fetch(apiUrl(path), {
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...(options.headers || {}),
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`API request failed: ${response.status}`);
+    }
+    return response.json();
+  };
+
+  const loadRequestsFromApi = async () => {
+    const data = await fetchJson("/requests");
+    state.requests = data.items || [];
+  };
+
   const computeActive = () =>
     state.requests.filter((req) => req.status !== "complete").length;
 
@@ -164,7 +187,7 @@
   };
 
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const data = new FormData(form);
       const payload = {
@@ -174,9 +197,23 @@
         model: data.get("model"),
         label: data.get("label"),
         time: data.get("datetime"),
+        notes: data.get("notes") || "",
         status: "queued",
       };
-      upsertRequest(payload);
+      if (state.apiEnabled) {
+        try {
+          await fetchJson("/requests", {
+            method: "POST",
+            body: JSON.stringify(payload),
+          });
+          await loadRequestsFromApi();
+        } catch (error) {
+          setToast("Failed to submit to local DB API.");
+          return;
+        }
+      } else {
+        upsertRequest(payload);
+      }
       renderRequestList();
       renderAdminTable();
       updateStats();
@@ -186,20 +223,38 @@
   }
 
   if (adminTable) {
-    adminTable.addEventListener("click", (event) => {
+    adminTable.addEventListener("click", async (event) => {
       const button = event.target.closest("button[data-action]");
       if (!button) return;
       const action = button.dataset.action;
       const id = button.dataset.id;
       const target = state.requests.find((req) => req.id === id);
       if (!target) return;
-      if (action === "complete") {
-        target.status = "complete";
-        setToast(`Marked ${id} as complete.`);
-      }
-      if (action === "remove") {
-        state.requests = state.requests.filter((req) => req.id !== id);
-        setToast(`Removed ${id} from queue.`);
+      try {
+        if (action === "complete") {
+          if (state.apiEnabled) {
+            await fetchJson(`/requests/${id}`, {
+              method: "PATCH",
+              body: JSON.stringify({ status: "complete" }),
+            });
+            await loadRequestsFromApi();
+          } else {
+            target.status = "complete";
+          }
+          setToast(`Marked ${id} as complete.`);
+        }
+        if (action === "remove") {
+          if (state.apiEnabled) {
+            await fetchJson(`/requests/${id}`, { method: "DELETE" });
+            await loadRequestsFromApi();
+          } else {
+            state.requests = state.requests.filter((req) => req.id !== id);
+          }
+          setToast(`Removed ${id} from queue.`);
+        }
+      } catch (error) {
+        setToast("Admin action failed.");
+        return;
       }
       renderRequestList();
       renderAdminTable();
@@ -208,11 +263,20 @@
   }
 
   if (refreshQueue) {
-    refreshQueue.addEventListener("click", () => {
+    refreshQueue.addEventListener("click", async () => {
+      if (state.apiEnabled) {
+        try {
+          await loadRequestsFromApi();
+        } catch (error) {
+          setToast("Unable to refresh from local DB API.");
+        }
+      }
       updateStats();
       renderRequestList();
       renderAdminTable();
-      setToast("Queue refreshed from Postgres.");
+      setToast(
+        state.apiEnabled ? "Queue refreshed from local DB." : "Queue refreshed."
+      );
     });
   }
 
@@ -387,9 +451,23 @@
     }
   }, 10000);
 
-  renderRequestList();
-  renderAdminTable();
-  updateStats();
-  drawGlobe();
-  animate();
+  const initialize = async () => {
+    try {
+      await fetchJson("/health");
+      state.apiEnabled = true;
+      await loadRequestsFromApi();
+      if (lastSync) lastSync.textContent = "just now";
+    } catch (error) {
+      state.apiEnabled = false;
+      if (lastSync) lastSync.textContent = "demo mode";
+    }
+
+    renderRequestList();
+    renderAdminTable();
+    updateStats();
+    drawGlobe();
+    animate();
+  };
+
+  initialize();
 })();

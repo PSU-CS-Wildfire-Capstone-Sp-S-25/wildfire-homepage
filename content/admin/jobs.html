@@ -1,0 +1,26 @@
+---
+title: "Admin Jobs"
+omit_header_text: true
+---
+
+<div class="wf-shell">
+  <section class="wf-card wf-admin-card">
+    <div class="wf-admin-header">
+      <div>
+        <p class="wf-eyebrow">Admin Console</p>
+        <h1>Submitted Fire Jobs</h1>
+      </div>
+      <div class="wf-admin-controls">
+        <button id="admin-refresh" type="button" class="wf-btn-ghost">Refresh</button>
+        <button id="admin-logout" type="button" class="wf-btn-ghost">Log Out</button>
+      </div>
+    </div>
+
+    <p class="wf-subtext">This page is hidden from public navigation and requires admin authentication.</p>
+    <p id="admin-jobs-message" class="wf-message" role="status" aria-live="polite"></p>
+
+    <div id="admin-jobs-table" class="wf-table-shell"></div>
+  </section>
+</div>
+
+<script src="/js/admin-jobs.js" defer></script>
