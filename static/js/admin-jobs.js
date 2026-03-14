@@ -3,6 +3,7 @@
   const TOKEN_KEY = "wf_admin_token";
 
   const table = document.getElementById("admin-jobs-table");
+  const stats = document.getElementById("admin-jobs-stats");
   const message = document.getElementById("admin-jobs-message");
   const refreshBtn = document.getElementById("admin-refresh");
   const logoutBtn = document.getElementById("admin-logout");
@@ -19,6 +20,29 @@
     if (!message) return;
     message.textContent = text;
     message.classList.toggle("is-error", isError);
+  };
+
+  const escapeHtml = (value) =>
+    String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+
+  const formatDateTime = (value) => {
+    if (!value) return "Not set";
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) {
+      return String(value).replace("T", " ");
+    }
+    return new Intl.DateTimeFormat(undefined, {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+    }).format(parsed);
   };
 
   const redirectToLogin = () => {
@@ -60,6 +84,36 @@
 
   const formatStatus = (status) => status.charAt(0).toUpperCase() + status.slice(1);
 
+  const renderStats = (items) => {
+    if (!stats) return;
+
+    const total = items.length;
+    const queued = items.filter((item) => item.status === "queued").length;
+    const complete = items.filter((item) => item.status === "complete").length;
+    const activeRuns = items.filter((item) => {
+      const runStatus = String(item.run_status || "").toLowerCase();
+      return runStatus && runStatus !== "complete" && runStatus !== "failed";
+    }).length;
+
+    const cards = [
+      { label: "Total jobs", value: total, tone: "fire" },
+      { label: "Queued", value: queued, tone: "amber" },
+      { label: "Completed", value: complete, tone: "green" },
+      { label: "Runs in progress", value: activeRuns, tone: "default" },
+    ];
+
+    stats.innerHTML = cards
+      .map(
+        (card) => `
+          <article class="wf-admin-stat wf-admin-stat-${card.tone}">
+            <span class="wf-admin-stat-label">${card.label}</span>
+            <strong class="wf-admin-stat-value">${card.value}</strong>
+          </article>
+        `
+      )
+      .join("");
+  };
+
   const clearPendingDelete = (id) => {
     const pending = pendingDeleteState[id];
     if (!pending) return;
@@ -88,6 +142,7 @@
   const renderRows = (items) => {
     itemsState = items;
     if (!table) return;
+    renderStats(items);
     const rows = items
       .map(
         (req) => {
@@ -96,49 +151,61 @@
           const completeLabel = req.status === "complete" ? "Undo" : "Complete";
           const deleteAction = isDeletePending ? "undo-delete" : "delete";
           const deleteLabel = isDeletePending ? "Undo Delete" : "Delete";
+          const runStatus = req.run_status ? formatStatus(req.run_status) : "Not started";
+          const cardClass = isDeletePending ? " wf-admin-job-card-pending" : "";
           return `
-          <div class="wf-table-row">
-            <div>${req.id}</div>
-            <div>${req.label}</div>
-            <div>${Number(req.lat).toFixed(3)}, ${Number(req.lon).toFixed(3)}</div>
-            <div>${String(req.model || "").toUpperCase()}</div>
-            <div>${String(req.time || "").replace("T", " ")}</div>
-            <div>
-              <span class="wf-status wf-status-${req.status}">${formatStatus(req.status)}</span>
+          <article class="wf-admin-job-card${cardClass}">
+            <div class="wf-admin-job-head">
+              <div>
+                <p class="wf-admin-job-id">${escapeHtml(req.id)}</p>
+                <h3>${escapeHtml(req.label || "Untitled request")}</h3>
+              </div>
+              <div class="wf-admin-job-badges">
+                <span class="wf-status wf-status-${escapeHtml(req.status)}">${formatStatus(req.status)}</span>
+                <span class="wf-admin-run-pill">${escapeHtml(runStatus)}</span>
+              </div>
             </div>
-            <div>${req.run_status ? formatStatus(req.run_status) : "-"}</div>
-            <div class="wf-row-actions">
+
+            <div class="wf-admin-job-meta">
+              <div>
+                <span>Coordinates</span>
+                <strong>${Number(req.lat).toFixed(3)}, ${Number(req.lon).toFixed(3)}</strong>
+              </div>
+              <div>
+                <span>Model</span>
+                <strong>${escapeHtml(String(req.model || "").toUpperCase() || "N/A")}</strong>
+              </div>
+              <div>
+                <span>Ignition time</span>
+                <strong>${escapeHtml(formatDateTime(req.time))}</strong>
+              </div>
+              <div>
+                <span>Run state</span>
+                <strong>${escapeHtml(runStatus)}</strong>
+              </div>
+            </div>
+
+            <div class="wf-row-actions wf-admin-actions">
               <button type="button" data-action="run-orca" data-id="${req.id}">Run Orca</button>
               <button type="button" data-action="${completeAction}" data-id="${req.id}">${completeLabel}</button>
               <button type="button" data-action="${deleteAction}" data-id="${req.id}">${deleteLabel}</button>
             </div>
-          </div>
+          </article>
         `;
         }
       )
       .join("");
 
-    table.innerHTML = `
-      <div class="wf-table-head">
-        <div>ID</div>
-        <div>Label</div>
-        <div>Coordinates</div>
-        <div>Model</div>
-        <div>Ignition Time</div>
-        <div>Status</div>
-        <div>Run</div>
-        <div>Actions</div>
-      </div>
-      ${rows || '<div class="wf-empty">No jobs found.</div>'}
-    `;
+    table.innerHTML = rows || '<div class="wf-empty">No jobs found.</div>';
   };
 
   const loadJobs = async () => {
     setMessage("Loading jobs...");
     try {
       const result = await authedFetch("/requests");
-      renderRows(result.items || []);
-      setMessage("Jobs loaded.");
+      const items = result.items || [];
+      renderRows(items);
+      setMessage(`${items.length} job${items.length === 1 ? "" : "s"} loaded.`);
     } catch (error) {
       setMessage(error.message || "Failed to load jobs.", true);
     }

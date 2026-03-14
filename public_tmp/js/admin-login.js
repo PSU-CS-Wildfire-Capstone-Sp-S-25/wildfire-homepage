@@ -3,6 +3,7 @@
   const TOKEN_KEY = "wf_admin_token";
   const form = document.getElementById("admin-login-form");
   const message = document.getElementById("admin-login-message");
+  const jobsUrl = new URL("../jobs/", window.location.href).toString();
 
   const setMessage = (text, isError = false) => {
     if (!message) return;
@@ -35,7 +36,7 @@
       }
 
       localStorage.setItem(TOKEN_KEY, result.token);
-      window.location.href = "/admin/jobs/";
+      window.location.href = jobsUrl;
     } catch (error) {
       setMessage(error.message || "Login failed.", true);
     }

@@ -11,16 +11,27 @@
       
         Admin Console
         Submitted Fire Jobs
+        Review incoming requests, trigger model runs, and manage job lifecycle from a single organized dashboard.
       
+
       
         Refresh
         Log Out
       
     
 
-    This page is hidden from public navigation and requires admin authentication.
     
 
+    
+      
+        
+          Operations Queue
+          Each card shows request details, current state, and admin actions.
+        
+        
+      
+
+      
     
   
 
@@ -35,19 +46,22 @@
   <meta property="og:site_name" content="Wildfire Lab">
   <meta property="og:title" content="Admin Jobs">
   <meta property="og:description" content="Admin Console
-Submitted Fire Jobs Refresh Log Out This page is hidden from public navigation and requires admin authentication.">
+Submitted Fire Jobs Review incoming requests, trigger model runs, and manage job lifecycle from a single organized dashboard.
+Refresh Log Out Operations Queue Each card shows request details, current state, and admin actions.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="admin">
 
   <meta itemprop="name" content="Admin Jobs">
   <meta itemprop="description" content="Admin Console
-Submitted Fire Jobs Refresh Log Out This page is hidden from public navigation and requires admin authentication.">
-  <meta itemprop="wordCount" content="19">
+Submitted Fire Jobs Review incoming requests, trigger model runs, and manage job lifecycle from a single organized dashboard.
+Refresh Log Out Operations Queue Each card shows request details, current state, and admin actions.">
+  <meta itemprop="wordCount" content="35">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Admin Jobs">
   <meta name="twitter:description" content="Admin Console
-Submitted Fire Jobs Refresh Log Out This page is hidden from public navigation and requires admin authentication.">
+Submitted Fire Jobs Review incoming requests, trigger model runs, and manage job lifecycle from a single organized dashboard.
+Refresh Log Out Operations Queue Each card shows request details, current state, and admin actions.">
 
 <link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
 
@@ -238,22 +252,33 @@ Submitted Fire Jobs Refresh Log Out This page is hidden from public navigation a
   <section class="article-body">
     
 <div class="wf-shell">
-  <section class="wf-card wf-admin-card">
-    <div class="wf-admin-header">
-      <div>
+  <section class="wf-admin-page">
+    <div class="wf-admin-hero">
+      <div class="wf-admin-hero-copy">
         <p class="wf-eyebrow">Admin Console</p>
         <h1>Submitted Fire Jobs</h1>
+        <p class="wf-subtext">Review incoming requests, trigger model runs, and manage job lifecycle from a single organized dashboard.</p>
       </div>
+
       <div class="wf-admin-controls">
         <button id="admin-refresh" type="button" class="wf-btn-ghost">Refresh</button>
         <button id="admin-logout" type="button" class="wf-btn-ghost">Log Out</button>
       </div>
     </div>
 
-    <p class="wf-subtext">This page is hidden from public navigation and requires admin authentication.</p>
-    <p id="admin-jobs-message" class="wf-message" role="status" aria-live="polite"></p>
+    <div id="admin-jobs-stats" class="wf-admin-stats" aria-label="Job summary"></div>
 
-    <div id="admin-jobs-table" class="wf-table-shell"></div>
+    <section class="wf-card wf-admin-card">
+      <div class="wf-admin-panel-head">
+        <div>
+          <h2>Operations Queue</h2>
+          <p class="wf-subtext">Each card shows request details, current state, and admin actions.</p>
+        </div>
+        <p id="admin-jobs-message" class="wf-message" role="status" aria-live="polite"></p>
+      </div>
+
+      <div id="admin-jobs-table" class="wf-admin-jobs-grid"></div>
+    </section>
   </section>
 </div>
 
